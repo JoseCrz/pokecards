@@ -123,6 +123,12 @@ export const GlobalStyle = createGlobalStyle`
   textarea {
     resize: vertical;
   }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
   
   .chromeframe {
     margin: 0.2em 0;
