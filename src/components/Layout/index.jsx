@@ -3,19 +3,24 @@ import { Helmet } from 'react-helmet'
 
 import { Navbar } from '../Navbar'
 
-import { Arranger } from './styles'
+import { Arranger, H1 } from './styles'
 
 export const Layout = ({ children, title }) => {
   return (
     <>
       <Helmet>
-        <title>Home | {title}</title>
+        <title>Pokémon | {title}</title>
         <link href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap' rel='stylesheet' />
       </Helmet>
       <Arranger>
         <Navbar />
         <main>
-          {children}
+          <header>
+            <H1>{title}</H1>
+          </header>
+          {
+            children
+          }
         </main>
       </Arranger>
     </>

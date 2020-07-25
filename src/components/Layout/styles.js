@@ -6,3 +6,7 @@ export const Arranger = styled.div`
   grid-template-rows: 100vh;
   gap: 15px;
 `
+
+export const H1 = styled.h1`
+  font-size: 36px;
+`
