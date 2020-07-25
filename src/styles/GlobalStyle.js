@@ -10,6 +10,8 @@ export const GlobalStyle = createGlobalStyle`
     --text-white: #FFF;
     --text-strong: #00087F;
     --icon: #2B316C;
+    --border: 6px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   }
   
   * {
@@ -129,6 +131,10 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  li {
+    display: inline-block;
   }
   
   .chromeframe {
