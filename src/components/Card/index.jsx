@@ -8,9 +8,9 @@ export const Card = ({ id, name, nationalPokedexNumber, imageUrl, types }) => {
       <Figure>
         <Img src={imageUrl} alt='' />
       </Figure>
-      <Details>
+      {/* <Details>
         <Link to='/'>View Details</Link>
-      </Details>
+      </Details> */}
     </Div>
   )
 }

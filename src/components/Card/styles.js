@@ -23,6 +23,13 @@ export const Div = styled.div`
   box-shadow: var(--shadow);
   position: relative;
   margin: 0 10px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  &:hover {
+    box-shadow: var(--shadow--big);
+    transform: scale(1.1);
+    z-index: 99;
+  }
 
   &:hover ${Details} {
     opacity: 1
