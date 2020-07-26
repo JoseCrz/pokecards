@@ -5,6 +5,7 @@ export const Card = styled.div`
   border-radius: var(--border);
   background: var(--element);
   box-shadow: var(--shadow);
+  height: 100%;
 `
 
 export const Figure = styled.figure`
@@ -17,4 +18,8 @@ export const Figure = styled.figure`
 
 export const Img = styled.img`
   width: 100%;
+`
+
+export const H2 = styled.h2`
+  text-align: center;
 `

@@ -1,18 +1,22 @@
 import React, { useContext } from 'react'
 import { Context } from '../../Context'
 
-import { Card, Figure, Img } from './styles'
-
-const testUrl = 'https://images.pokemontcg.io/xy7/4_hires.png'
+import { Card, Figure, Img, H2 } from './styles'
 
 export const BigCard = () => {
   const { bigPicture } = useContext(Context)
 
   return (
     <Card>
-      <Figure>
-        <Img src={bigPicture} />
-      </Figure>
+      {
+        bigPicture
+          ? (
+            <Figure>
+              <Img src={bigPicture} />
+            </Figure>
+          )
+          : <H2>Select a card</H2>
+      }
     </Card>
   )
 }
