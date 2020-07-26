@@ -18,7 +18,6 @@ export const Details = styled.div`
 export const Div = styled.div`
   width: 180px;
   overflow: hidden;
- 
   border-radius: var(--border);
   background: var(--element);
   box-shadow: var(--shadow);
