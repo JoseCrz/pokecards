@@ -24,10 +24,11 @@ export const Div = styled.div`
   position: relative;
   margin: 0 10px;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  cursor: pointer;
 
   &:hover {
     box-shadow: var(--shadow--big);
-    transform: scale(1.1);
+    transform: scale(1.15);
     z-index: 99;
   }
 
