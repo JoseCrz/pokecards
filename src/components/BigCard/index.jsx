@@ -1,22 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Context } from '../../Context'
+import { Loader } from '../Loader'
 
-import { Card, Figure, Img, H2 } from './styles'
+import { Card, Figure, ThumbImg, LoadedImage, H2 } from './styles'
 
 export const BigCard = () => {
-  const { bigPicture } = useContext(Context)
+  const { bigPicture, thumbPicture, bigPictureLoaded, setBigPictureLoaded } = useContext(Context)
 
+  console.log('BigCard -> bigPictureLoading', bigPictureLoaded)
+
+  const handleOnLoad = () => {
+    console.log('finished loading')
+    setBigPictureLoaded(true)
+  }
   return (
     <Card>
-      {
-        bigPicture
-          ? (
-            <Figure>
-              <Img src={bigPicture} />
-            </Figure>
-          )
-          : <H2>Select a card</H2>
-      }
+      <ThumbImg src={thumbPicture} isLoaded={bigPictureLoaded} />
+      <LoadedImage onLoad={handleOnLoad} src={bigPicture} isLoaded={bigPictureLoaded} />
     </Card>
   )
 }

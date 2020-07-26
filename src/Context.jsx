@@ -3,10 +3,16 @@ export const Context = createContext()
 
 const Provider = ({ children }) => {
   const [bigPicture, setBigPicture] = useState(null)
+  const [thumbPicture, setThumbPicture] = useState(null)
+  const [bigPictureLoaded, setBigPictureLoaded] = useState(false)
 
   const value = {
     bigPicture,
-    setBigPicture
+    setBigPicture,
+    bigPictureLoaded,
+    setBigPictureLoaded,
+    thumbPicture,
+    setThumbPicture
   }
 
   return (

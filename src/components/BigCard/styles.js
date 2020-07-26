@@ -6,6 +6,7 @@ export const Card = styled.div`
   background: var(--element);
   box-shadow: var(--shadow);
   height: 100%;
+  position: relative;
 `
 
 export const Figure = styled.figure`
@@ -16,8 +17,26 @@ export const Figure = styled.figure`
   justify-content: center;
 `
 
-export const Img = styled.img`
+const Img = styled.img`
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`
+
+export const ThumbImg = styled(Img)`
+  filter: blur(20px);
+  transform: scale(1.1);
+  /* transition: visibility 0ms ease 400ms; */
+  visibility: ${props => props.isLoaded ? 'hidden' : 'visible'};
+`
+
+export const LoadedImage = styled(Img)`
+  /* transition: opacity 400ms ease 0ms; */
+  opacity: ${props => props.isLoaded ? 1 : 0};
 `
 
 export const H2 = styled.h2`
