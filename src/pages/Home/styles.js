@@ -8,6 +8,7 @@ export const Grid = styled.div`
   padding: 0 10px;
 `
 export const Column = styled.div`
+  padding: 15px 0;
   max-height: 100%;
   overflow: scroll;
 `
