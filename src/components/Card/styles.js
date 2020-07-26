@@ -22,13 +22,13 @@ export const Div = styled.div`
   background: var(--element);
   box-shadow: var(--shadow);
   position: relative;
-  margin: 0 10px;
+  margin: 10px;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   cursor: pointer;
 
   &:hover {
     box-shadow: var(--shadow--big);
-    transform: scale(1.15);
+    transform: scale(1.1);
     z-index: 99;
   }
 
