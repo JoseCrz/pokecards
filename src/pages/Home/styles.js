@@ -5,6 +5,7 @@ export const Grid = styled.div`
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1fr;
   overflow: scroll;
+  padding: 0 10px;
 `
 export const Column = styled.div`
   max-height: 100%;
