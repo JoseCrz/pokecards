@@ -14,5 +14,5 @@ export const H1 = styled.h1`
 export const Main = styled.main`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 100px 1fr;
 `
