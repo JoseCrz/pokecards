@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../Context'
 
-import { Div, Img, Figure, Details, Link } from './styles'
+import { Div, Img, Figure } from './styles'
 
-export const Card = ({ id, name, nationalPokedexNumber, imageUrl, types }) => {
+export const Card = ({ id, imageUrl, imageUrlHiRes }) => {
+  const { setBigPicture } = useContext(Context)
+
+  const handleOnClick = () => {
+    setBigPicture(imageUrlHiRes)
+  }
+
   return (
-    <Div>
+    <Div onClick={handleOnClick}>
       <Figure>
         <Img src={imageUrl} alt='' />
       </Figure>
