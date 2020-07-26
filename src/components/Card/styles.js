@@ -10,7 +10,9 @@ export const Details = styled.div`
   height: 40px;
   justify-content: center;
   align-items: center;
-  display: none;
+  display: flex;
+  opacity: 0;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
 `
 
 export const Div = styled.div`
@@ -22,8 +24,9 @@ export const Div = styled.div`
   box-shadow: var(--shadow);
   position: relative;
   margin: 0 10px;
+
   &:hover ${Details} {
-    display: flex;
+    opacity: 1
   }
 `
 
