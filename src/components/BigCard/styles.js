@@ -6,17 +6,22 @@ export const Card = styled.div`
   background: var(--element);
   box-shadow: var(--shadow);
   height: 100%;
+  position: relative;
 `
 
 export const Top = styled.div`
-  border: 1px solid red;
-  height: 90%;
+  height: 100%;
   position: relative;
 `
 
 export const Bottom = styled.div`
-  border: 1px solid blue;
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background: var(--element);
+  border-radius: var(--border);
+  box-shadow: var(--shadow);
 `
 
 export const Figure = styled.figure`
