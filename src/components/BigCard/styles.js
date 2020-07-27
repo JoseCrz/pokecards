@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { BsClipboardData } from 'react-icons/bs'
 
 export const Card = styled.div`
   overflow: hidden;
@@ -22,6 +23,9 @@ export const Bottom = styled.div`
   background: var(--element);
   border-radius: var(--border);
   box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 `
 
 export const Figure = styled.figure`
@@ -56,4 +60,17 @@ export const LoadedImage = styled(Img)`
 
 export const H2 = styled.h2`
   text-align: center;
+`
+
+export const DataIcon = styled(BsClipboardData)`
+  font-size: 50px;
+  background: #FAFAFA;
+  padding: 10px;
+  border-radius: var(--border);
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .2s;
+
+  &:hover {
+    background: var(--primary);
+    color: var(--text-white);
+  }
 `

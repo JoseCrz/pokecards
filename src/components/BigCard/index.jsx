@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
+import { Link } from '@reach/router'
 import { Context } from '../../Context'
 
-import { Card, Figure, ThumbImg, LoadedImage, H2, Top, Bottom } from './styles'
+import { Card, ThumbImg, LoadedImage, H2, Top, Bottom, DataIcon } from './styles'
 
 export const BigCard = () => {
   const { bigPicture, thumbPicture, bigPictureLoaded, setBigPictureLoaded } = useContext(Context)
@@ -22,7 +23,11 @@ export const BigCard = () => {
           ) : <H2>Select an image</H2>
         }
       </Top>
-      <Bottom />
+      <Bottom>
+        <Link to='/'>
+          <DataIcon />
+        </Link>
+      </Bottom>
     </Card>
   )
 }
