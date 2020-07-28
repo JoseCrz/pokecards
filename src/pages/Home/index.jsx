@@ -1,5 +1,6 @@
 import React from 'react'
 import { Layout } from '../../components/Layout'
+import { Search } from '../../components/Search'
 import { CardList } from '../../components/CardList'
 import { BigCard } from '../../components/BigCard'
 
@@ -12,6 +13,7 @@ export const Home = () => {
     <Layout title='Home'>
       <Grid>
         <Column>
+          <Search />
           <CardList cards={dataMock} />
         </Column>
         <Column>
