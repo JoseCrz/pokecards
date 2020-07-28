@@ -5,6 +5,7 @@ const Provider = ({ children }) => {
   const [bigPicture, setBigPicture] = useState(null)
   const [thumbPicture, setThumbPicture] = useState(null)
   const [bigPictureLoaded, setBigPictureLoaded] = useState(false)
+  const [detailId, setDetailId] = useState('')
 
   const value = {
     bigPicture,
@@ -12,7 +13,9 @@ const Provider = ({ children }) => {
     bigPictureLoaded,
     setBigPictureLoaded,
     thumbPicture,
-    setThumbPicture
+    setThumbPicture,
+    detailId,
+    setDetailId
   }
 
   return (
