@@ -1,10 +1,9 @@
 import React, { useContext } from 'react'
-import { Link } from '@reach/router'
 import { Context } from '../../Context'
 
 import { ActionButton } from '../ActionButton'
 
-import { Card, ThumbImg, LoadedImage, H2, Top, Bottom, DataIcon } from './styles'
+import { Card, ThumbImg, LoadedImage, H2, Top, Bottom } from './styles'
 
 export const BigCard = () => {
   const { currentCard, bigPictureLoaded, setBigPictureLoaded } = useContext(Context)
