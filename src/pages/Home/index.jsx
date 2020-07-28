@@ -6,19 +6,21 @@ import { BigCard } from '../../components/BigCard'
 
 import { dataMock } from '../../mocks/dataMock'
 
-import { Grid, Column } from './styles'
+import { Grid, SearchContainer, CardContainer, CardsContainer } from './styles'
 
 export const Home = () => {
   return (
     <Layout title='Home'>
       <Grid>
-        <Column>
+        <SearchContainer>
           <Search />
+        </SearchContainer>
+        <CardsContainer>
           <CardList cards={dataMock} />
-        </Column>
-        <Column>
+        </CardsContainer>
+        <CardContainer>
           <BigCard />
-        </Column>
+        </CardContainer>
       </Grid>
     </Layout>
   )
