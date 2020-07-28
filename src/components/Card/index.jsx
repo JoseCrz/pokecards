@@ -3,26 +3,26 @@ import { Context } from '../../Context'
 
 import { Div, Img, Figure } from './styles'
 
-export const Card = ({ id, imageUrl, imageUrlHiRes }) => {
-  const { setBigPicture, setThumbPicture, bigPicture, setBigPictureLoaded, setDetailId } = useContext(Context)
+export const Card = ({ card }) => {
+  const { currentCard, setCurrentCard, setBigPictureLoaded } = useContext(Context)
 
   const handleOnClick = () => {
-    if (bigPicture !== imageUrlHiRes) {
-      setDetailId(id)
-      setThumbPicture(imageUrl)
+    if (currentCard === null) {
       setBigPictureLoaded(false)
-      setBigPicture(imageUrlHiRes)
+      setCurrentCard(card)
+    } else {
+      if (currentCard.id !== card.id) {
+        setBigPictureLoaded(false)
+        setCurrentCard(card)
+      }
     }
   }
 
   return (
     <Div onClick={handleOnClick}>
       <Figure>
-        <Img src={imageUrl} alt='' />
+        <Img src={card.imageUrl} alt='' />
       </Figure>
-      {/* <Details>
-        <Link to='/'>View Details</Link>
-      </Details> */}
     </Div>
   )
 }
