@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import { Link } from '@reach/router'
 import { Context } from '../../Context'
 
+import { ActionButton } from '../ActionButton'
+
 import { Card, ThumbImg, LoadedImage, H2, Top, Bottom, DataIcon } from './styles'
 
 export const BigCard = () => {
@@ -24,9 +26,15 @@ export const BigCard = () => {
         }
       </Top>
       <Bottom>
-        <Link to=''>
-          <DataIcon />
-        </Link>
+        {
+          currentCard ? (
+            <>
+              {currentCard.evolvesFrom ? <ActionButton label='Evolves from' item={currentCard.evolvesFrom} /> : null}
+              <ActionButton label='Series' item={currentCard.series} />
+              <ActionButton label='Set' item={currentCard.set} />
+            </>
+          ) : null
+        }
       </Bottom>
     </Card>
   )
