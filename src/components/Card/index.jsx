@@ -4,10 +4,11 @@ import { Context } from '../../Context'
 import { Div, Img, Figure } from './styles'
 
 export const Card = ({ id, imageUrl, imageUrlHiRes }) => {
-  const { setBigPicture, setThumbPicture, bigPicture, setBigPictureLoaded } = useContext(Context)
+  const { setBigPicture, setThumbPicture, bigPicture, setBigPictureLoaded, setDetailId } = useContext(Context)
 
   const handleOnClick = () => {
     if (bigPicture !== imageUrlHiRes) {
+      setDetailId(id)
       setThumbPicture(imageUrl)
       setBigPictureLoaded(false)
       setBigPicture(imageUrlHiRes)

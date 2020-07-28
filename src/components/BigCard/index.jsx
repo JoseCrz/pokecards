@@ -5,7 +5,7 @@ import { Context } from '../../Context'
 import { Card, ThumbImg, LoadedImage, H2, Top, Bottom, DataIcon } from './styles'
 
 export const BigCard = () => {
-  const { bigPicture, thumbPicture, bigPictureLoaded, setBigPictureLoaded } = useContext(Context)
+  const { bigPicture, thumbPicture, bigPictureLoaded, setBigPictureLoaded, detailId } = useContext(Context)
 
   const handleOnLoad = () => {
     setBigPictureLoaded(true)
@@ -24,7 +24,7 @@ export const BigCard = () => {
         }
       </Top>
       <Bottom>
-        <Link to='/'>
+        <Link to={`card/${detailId}`}>
           <DataIcon />
         </Link>
       </Bottom>
