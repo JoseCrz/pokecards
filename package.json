@@ -27,6 +27,7 @@
   "homepage": "https://github.com/JoseCrz/pokemon-tcg#readme",
   "dependencies": {
     "@reach/router": "^1.3.4",
+    "intersection-observer": "^0.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
