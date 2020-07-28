@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link as RouterLink } from '@reach/router'
+import { fadeIn } from '../../styles/Animations'
 
 export const Details = styled.div`
   position: absolute;
@@ -46,6 +47,7 @@ export const Figure = styled.figure`
 `
 
 export const Img = styled.img`
+  ${fadeIn({ time: '2.5s' })}
   width: 100%;
   height: auto;
 `
