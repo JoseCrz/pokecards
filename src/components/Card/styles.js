@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link as RouterLink } from '@reach/router'
 import { fadeIn } from '../../styles/Animations'
 
 export const Details = styled.div`
@@ -18,6 +17,7 @@ export const Details = styled.div`
 
 export const Container = styled.div`
   width: 180px;
+  height: 251px;
   overflow: hidden;
   border-radius: var(--border);
   background: var(--element);
@@ -41,7 +41,6 @@ export const Container = styled.div`
 export const Figure = styled.figure`
   margin: 0;
   border: 0;
-  padding: 1px;
   display: flex;
   justify-content: center;
 `
@@ -49,16 +48,5 @@ export const Figure = styled.figure`
 export const Img = styled.img`
   ${fadeIn({ time: '2.5s' })}
   width: 100%;
-  height: auto;
-`
-
-export const Link = styled(RouterLink)`
-  text-decoration: none;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  &::after {
-    content: '→';
-    margin-left: 5px;
-  }
+  height: 100%;
 `
