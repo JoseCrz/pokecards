@@ -1,31 +1,11 @@
-import React, { useContext } from 'react'
-import { Context } from '../../Context'
-import { fetchCards } from '../../utils/fetchCards'
-
+import React from 'react'
 import { Container, Input, Button, Icon } from './styles'
 
-export const InputSearch = () => {
-  const { setCards, searchString, setSearchString } = useContext(Context)
-
-  const handleSearch = async () => {
-    const cards = await fetchCards(searchString)
-    setCards(cards)
-  }
-
-  const handleOnChange = ({ target }) => {
-    setSearchString(target.value)
-  }
-
-  const handleOnKeyPress = event => {
-    if (event.charCode === 13) {
-      handleSearch()
-    }
-  }
-
+export const InputSearch = ({ onClick, onChange, onKeyPress }) => {
   return (
     <Container>
-      <Input onChange={handleOnChange} onKeyPress={handleOnKeyPress} />
-      <Button onClick={handleSearch}>
+      <Input onChange={onChange} onKeyPress={onKeyPress} />
+      <Button onClick={onClick}>
         <Icon />
       </Button>
     </Container>
