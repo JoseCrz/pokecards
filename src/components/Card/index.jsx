@@ -3,7 +3,7 @@ import { Context } from '../../Context'
 
 import { useNearScreen } from '../../hooks/useNearScreen'
 
-import { Div, Img, Figure } from './styles'
+import { Container, Img, Figure } from './styles'
 
 export const Card = ({ card }) => {
   const { currentCard, setCurrentCard, setBigPictureLoaded } = useContext(Context)
@@ -22,13 +22,13 @@ export const Card = ({ card }) => {
   }
 
   return (
-    <Div onClick={handleOnClick} ref={element}>
+    <Container onClick={handleOnClick} ref={element}>
       {
         show &&
           <Figure>
             <Img src={card.imageUrl} alt='' />
           </Figure>
       }
-    </Div>
+    </Container>
   )
 }

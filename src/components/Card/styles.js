@@ -16,7 +16,7 @@ export const Details = styled.div`
   transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
 `
 
-export const Div = styled.div`
+export const Container = styled.div`
   width: 180px;
   overflow: hidden;
   border-radius: var(--border);
