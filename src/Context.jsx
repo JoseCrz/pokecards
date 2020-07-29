@@ -4,12 +4,15 @@ export const Context = createContext()
 const Provider = ({ children }) => {
   const [bigPictureLoaded, setBigPictureLoaded] = useState(false)
   const [currentCard, setCurrentCard] = useState(null)
+  const [cards, setCards] = useState([])
 
   const value = {
     bigPictureLoaded,
     setBigPictureLoaded,
     currentCard,
-    setCurrentCard
+    setCurrentCard,
+    cards,
+    setCards
   }
 
   return (
