@@ -5,17 +5,27 @@ import { fetchCards } from '../../utils/fetchCards'
 import { Container, Input, Button, Icon } from './styles'
 
 export const InputSearch = () => {
-  const { setCards } = useContext(Context)
+  const { setCards, searchString, setSearchString } = useContext(Context)
 
-  const handleOnClick = async () => {
-    const cards = await fetchCards('pikachu')
+  const handleSearch = async () => {
+    const cards = await fetchCards(searchString)
     setCards(cards)
+  }
+
+  const handleOnChange = ({ target }) => {
+    setSearchString(target.value)
+  }
+
+  const handleOnKeyPress = event => {
+    if (event.charCode === 13) {
+      handleSearch()
+    }
   }
 
   return (
     <Container>
-      <Input />
-      <Button onClick={handleOnClick}>
+      <Input onChange={handleOnChange} onKeyPress={handleOnKeyPress} />
+      <Button onClick={handleSearch}>
         <Icon />
       </Button>
     </Container>
