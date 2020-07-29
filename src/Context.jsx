@@ -5,7 +5,7 @@ export const Context = createContext()
 
 const Provider = ({ children }) => {
   const [bigPictureLoaded, setBigPictureLoaded] = useState(false)
-  const [currentCard, setCurrentCard] = useState(null)
+  const [currentCard, setCurrentCard] = useState({})
   const [cards, setCards] = useState([])
   const [searchString, setSearchString] = useState('')
   const [cardsLoading, setCardsLoading] = useState(true)
