@@ -21,10 +21,11 @@ const Provider = ({ children }) => {
     setSearchString,
     cardsLoading,
     setCardsLoading,
-    fetchCards: async () => {
+    fetchCards: async (optionalString) => {
       setCardsLoading(true)
       try {
-        const { data: { cards } } = await axios.get(`${apiUrl}?name=${searchString}`)
+        if (optionalString) setSearchString(optionalString)
+        const { data: { cards } } = await axios.get(`${apiUrl}?name=${optionalString || searchString}`) // this || is to ensure the request is done right
         setCards(cards)
         setCardsLoading(false)
       } catch (error) {

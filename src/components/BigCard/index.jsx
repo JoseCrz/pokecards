@@ -6,13 +6,18 @@ import { ActionButton } from '../ActionButton'
 import { Card, ThumbImg, LoadedImage, H2, Top, Bottom } from './styles'
 
 export const BigCard = () => {
-  const { currentCard, bigPictureLoaded, setBigPictureLoaded } = useContext(Context)
+  const { currentCard, bigPictureLoaded, setBigPictureLoaded, fetchCards } = useContext(Context)
   const { imageUrl, imageUrlHiRes, evolvesFrom, series, set } = currentCard
 
   const cardExists = Object.keys(currentCard).length > 0
 
   const handleOnLoad = () => {
     setBigPictureLoaded(true)
+  }
+
+  const handleOnClick = () => {
+    console.log(evolvesFrom)
+    fetchCards(evolvesFrom)
   }
 
   return (
@@ -31,7 +36,7 @@ export const BigCard = () => {
         {
           cardExists && (
             <>
-              {evolvesFrom && <ActionButton label='Evolves from' item={evolvesFrom} />}
+              {evolvesFrom && <ActionButton onClick={handleOnClick} label='Evolves from' item={evolvesFrom} />}
               <ActionButton label='Series' item={series} />
               <ActionButton label='Set' item={set} />
             </>
