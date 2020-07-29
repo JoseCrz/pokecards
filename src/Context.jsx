@@ -1,4 +1,6 @@
 import React, { createContext, useState } from 'react'
+import axios from 'axios'
+import { apiUrl } from './config'
 export const Context = createContext()
 
 const Provider = ({ children }) => {
@@ -18,7 +20,17 @@ const Provider = ({ children }) => {
     searchString,
     setSearchString,
     cardsLoading,
-    setCardsLoading
+    setCardsLoading,
+    fetchCards: async () => {
+      setCardsLoading(true)
+      try {
+        const { data: { cards } } = await axios.get(`${apiUrl}?name=${searchString}`)
+        setCards(cards)
+        setCardsLoading(false)
+      } catch (error) {
+        console.log(error)
+      }
+    }
   }
 
   return (

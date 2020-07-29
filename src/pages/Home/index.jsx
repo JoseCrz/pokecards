@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import { Context } from '../../Context'
 import { Layout } from '../../components/Layout'
 import { Search } from '../../components/Search'
 import { CardList } from '../../components/CardList'
 import { BigCard } from '../../components/BigCard'
 import { Loader } from '../../components/Loader'
 
-import { useFetchCards } from '../../hooks/useFetchCards'
-
 import { Grid, SearchContainer, CardContainer, CardsContainer } from './styles'
 
 export const Home = () => {
-  const { cardsLoading, cards } = useFetchCards()
+  const { cards, cardsLoading, fetchCards } = useContext(Context)
+
+  useEffect(() => {
+    fetchCards()
+  }, [])
 
   return (
     <Layout title='Home'>
