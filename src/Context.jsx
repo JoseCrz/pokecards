@@ -6,6 +6,7 @@ const Provider = ({ children }) => {
   const [currentCard, setCurrentCard] = useState(null)
   const [cards, setCards] = useState([])
   const [searchString, setSearchString] = useState('')
+  const [cardsLoading, setCardsLoading] = useState(true)
 
   const value = {
     bigPictureLoaded,
@@ -15,7 +16,9 @@ const Provider = ({ children }) => {
     cards,
     setCards,
     searchString,
-    setSearchString
+    setSearchString,
+    cardsLoading,
+    setCardsLoading
   }
 
   return (

@@ -10,7 +10,7 @@ import { useFetchCards } from '../../hooks/useFetchCards'
 import { Grid, SearchContainer, CardContainer, CardsContainer } from './styles'
 
 export const Home = () => {
-  const { loading, cards } = useFetchCards()
+  const { cardsLoading, cards } = useFetchCards()
 
   return (
     <Layout title='Home'>
@@ -20,7 +20,7 @@ export const Home = () => {
         </SearchContainer>
         <CardsContainer>
           {
-            loading ? <Loader /> : <CardList cards={cards} />
+            cardsLoading ? <Loader /> : <CardList cards={cards} />
           }
         </CardsContainer>
         <CardContainer>
