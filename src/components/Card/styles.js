@@ -49,4 +49,6 @@ export const Img = styled.img`
   ${fadeIn({ time: '2.5s' })}
   width: 100%;
   height: 100%;
+  transition: opacity 400ms ease 0ms;
+  opacity: ${props => props.loading ? 0 : 1};
 `

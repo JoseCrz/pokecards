@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { Context } from '../../Context'
 
 import { useNearScreen } from '../../hooks/useNearScreen'
@@ -6,6 +6,7 @@ import { useNearScreen } from '../../hooks/useNearScreen'
 import { Container, Img, Figure } from './styles'
 
 export const Card = ({ card }) => {
+  const [loading, setLoading] = useState(true)
   const { currentCard, setCurrentCard, setBigPictureLoaded } = useContext(Context)
   const [show, element] = useNearScreen()
 
@@ -26,7 +27,7 @@ export const Card = ({ card }) => {
       {
         show &&
           <Figure>
-            <Img src={card.imageUrl} alt='' />
+            <Img loading={loading} src={card.imageUrl} onLoad={() => setLoading(false)} alt='' />
           </Figure>
       }
     </Container>
