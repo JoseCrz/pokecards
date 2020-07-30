@@ -12,6 +12,10 @@ export const Input = styled.input`
   border-top-left-radius: var(--border);
   border-bottom-left-radius: var(--border);
   color: gray;
+
+  &:focus {
+    outline-color: var(--primary);
+  }
 `
 
 export const Button = styled.button`

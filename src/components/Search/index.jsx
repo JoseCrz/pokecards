@@ -19,7 +19,13 @@ export const Search = () => {
     <Container>
       <H2>Find your favorite Pokémon TCG Card!</H2>
       <Arranger>
-        <InputSearch value={searchString} onClick={handleOnClick} onChange={handleOnChange} onKeyPress={handleOnKeyPress} />
+        <InputSearch
+          value={searchString}
+          onClick={handleOnClick}
+          onChange={handleOnChange}
+          onKeyPress={handleOnKeyPress}
+          placeholder='Name of card'
+        />
         <Link to='/'>Explore sets</Link>
       </Arranger>
     </Container>
