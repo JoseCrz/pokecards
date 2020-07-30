@@ -2,8 +2,9 @@ import React, { useContext } from 'react'
 import { Context } from '../../Context'
 
 import { InputSearch } from '../InputSearch'
+import { RadioButton } from '../RadioButton'
 
-import { Container } from './styles'
+import { Container, H2, RadioContainer } from './styles'
 
 export const Search = () => {
   const { searchString, setSearchString, fetchCards } = useContext(Context)
@@ -16,7 +17,12 @@ export const Search = () => {
 
   return (
     <Container>
-      <h2>Find your favorite Pokémon TCG Card!</h2>
+      <H2>Find your favorite Pokémon TCG Card!</H2>
+      <RadioContainer>
+        <RadioButton>Card name</RadioButton>
+        <RadioButton>Series</RadioButton>
+        <RadioButton>Set</RadioButton>
+      </RadioContainer>
       <InputSearch value={searchString} onClick={handleOnClick} onChange={handleOnChange} onKeyPress={handleOnKeyPress} />
     </Container>
   )
