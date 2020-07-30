@@ -4,7 +4,7 @@ import { Context } from '../../Context'
 import { InputSearch } from '../InputSearch'
 import { RadioButton } from '../RadioButton'
 
-import { Container, H2, RadioContainer } from './styles'
+import { Container, H2, Arranger, Link } from './styles'
 
 export const Search = () => {
   const { searchString, setSearchString, fetchCards } = useContext(Context)
@@ -18,12 +18,10 @@ export const Search = () => {
   return (
     <Container>
       <H2>Find your favorite Pokémon TCG Card!</H2>
-      <RadioContainer>
-        <RadioButton>Card name</RadioButton>
-        <RadioButton>Series</RadioButton>
-        <RadioButton>Set</RadioButton>
-      </RadioContainer>
-      <InputSearch value={searchString} onClick={handleOnClick} onChange={handleOnChange} onKeyPress={handleOnKeyPress} />
+      <Arranger>
+        <InputSearch value={searchString} onClick={handleOnClick} onChange={handleOnChange} onKeyPress={handleOnKeyPress} />
+        <Link to='/'>Explore sets</Link>
+      </Arranger>
     </Container>
   )
 }
