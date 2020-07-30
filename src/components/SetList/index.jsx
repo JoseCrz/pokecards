@@ -7,7 +7,7 @@ export const SetList = ({ sets = [] }) => {
   return (
     <Container>
       {
-        sets.map(set => <Set key={set.code} {...set} />)
+        sets.map(set => <Set key={set.code} set={set} />)
       }
     </Container>
   )
