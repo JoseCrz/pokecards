@@ -1,4 +1,4 @@
-export const dataMock = [
+export const cardsMock = [
   {
     id: 'xy7-4',
     name: 'Bellossom',
@@ -568,5 +568,86 @@ export const dataMock = [
         value: '×2'
       }
     ]
+  }
+]
+
+export const setsMock = [
+  {
+    code: 'base1',
+    ptcgoCode: 'BS',
+    name: 'Base',
+    series: 'Base',
+    totalCards: 102,
+    standardLegal: false,
+    expandedLegal: false,
+    releaseDate: '01/09/1999',
+    symbolUrl: 'https://images.pokemontcg.io/base1/symbol.png',
+    logoUrl: 'https://images.pokemontcg.io/base1/logo.png',
+    updatedAt: '05/01/2020 16:06:00'
+  },
+  {
+    code: 'base2',
+    ptcgoCode: 'JU',
+    name: 'Jungle',
+    series: 'Base',
+    totalCards: 64,
+    standardLegal: false,
+    expandedLegal: false,
+    releaseDate: '06/16/1999',
+    symbolUrl: 'https://images.pokemontcg.io/base2/symbol.png',
+    logoUrl: 'https://images.pokemontcg.io/base2/logo.png',
+    updatedAt: '03/04/2018 10:35:00'
+  },
+  {
+    code: 'basep',
+    ptcgoCode: 'PR',
+    name: 'Wizards Black Star Promos',
+    series: 'Base',
+    totalCards: 53,
+    standardLegal: false,
+    expandedLegal: false,
+    releaseDate: '07/01/1999',
+    symbolUrl: 'https://images.pokemontcg.io/basep/symbol.png',
+    logoUrl: 'https://images.pokemontcg.io/basep/logo.png',
+    updatedAt: '03/07/2018 22:40:00'
+  },
+  {
+    code: 'base3',
+    ptcgoCode: 'FO',
+    name: 'Fossil',
+    series: 'Base',
+    totalCards: 62,
+    standardLegal: false,
+    expandedLegal: false,
+    releaseDate: '10/10/1999',
+    symbolUrl: 'https://images.pokemontcg.io/base3/symbol.png',
+    logoUrl: 'https://images.pokemontcg.io/base3/logo.png',
+    updatedAt: '02/08/2020 09:00:00'
+  },
+  {
+    code: 'base4',
+    ptcgoCode: 'B2',
+    name: 'Base Set 2',
+    series: 'Base',
+    totalCards: 130,
+    standardLegal: false,
+    expandedLegal: false,
+    releaseDate: '02/24/2000',
+    symbolUrl: 'https://images.pokemontcg.io/base4/symbol.png',
+    logoUrl: 'https://images.pokemontcg.io/base4/logo.png',
+    updatedAt: '02/13/2020 22:09:00'
+  },
+  {
+    code: 'base5',
+    ptcgoCode: 'TR',
+    name: 'Team Rocket',
+    series: 'Base',
+    totalCards: 83,
+    standardLegal: false,
+    expandedLegal: false,
+    releaseDate: '04/24/2000',
+    symbolUrl: 'https://images.pokemontcg.io/base5/symbol.png',
+    logoUrl: 'https://images.pokemontcg.io/base5/logo.png',
+    updatedAt: '03/04/2018 10:35:00'
   }
 ]
