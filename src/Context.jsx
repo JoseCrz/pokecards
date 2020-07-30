@@ -7,6 +7,7 @@ const Provider = ({ children }) => {
   const [bigPictureLoaded, setBigPictureLoaded] = useState(false)
   const [currentCard, setCurrentCard] = useState({})
   const [cards, setCards] = useState([])
+  const [currentSet, setCurrentSet] = useState({})
   const [searchString, setSearchString] = useState('')
   const [cardsLoading, setCardsLoading] = useState(true)
 
@@ -21,6 +22,8 @@ const Provider = ({ children }) => {
     setSearchString,
     cardsLoading,
     setCardsLoading,
+    currentSet,
+    setCurrentSet,
     fetchCards: async (optionalString) => {
       setCardsLoading(true)
       try {
