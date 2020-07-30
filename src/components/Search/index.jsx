@@ -16,7 +16,7 @@ export const Search = () => {
 
   return (
     <Container>
-      <h2>Search your favorite Pokémon</h2>
+      <h2>Find your favorite Pokémon TCG Card!</h2>
       <InputSearch value={searchString} onClick={handleOnClick} onChange={handleOnChange} onKeyPress={handleOnKeyPress} />
     </Container>
   )
