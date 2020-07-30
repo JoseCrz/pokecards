@@ -26,7 +26,7 @@ export const Search = () => {
           onKeyPress={handleOnKeyPress}
           placeholder='Name of card'
         />
-        <Link to='/'>Explore sets</Link>
+        <Link to='/sets'>Explore sets</Link>
       </Arranger>
     </Container>
   )
