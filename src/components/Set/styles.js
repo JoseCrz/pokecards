@@ -9,6 +9,13 @@ export const Container = styled.div`
   box-shadow: var(--shadow);
   width: 100%;
   height: 100%;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  &:hover {
+    box-shadow: var(--shadow--big);
+    transform: scale(1.05);
+    z-index: 99;
+  }
 `
 export const Img = styled.img`
   max-width: 60%;
