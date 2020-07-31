@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet'
 
 import { Navbar } from '../Navbar'
 
-import { Arranger, H1, Main } from './styles'
+import { Arranger, Main } from './styles'
 
-export const Layout = ({ children, title }) => {
+export const Layout = ({ children, title, header }) => {
   return (
     <>
       <Helmet>
@@ -15,9 +15,6 @@ export const Layout = ({ children, title }) => {
       <Arranger>
         <Navbar />
         <Main>
-          <header>
-            <H1>{title}</H1>
-          </header>
           {
             children
           }
