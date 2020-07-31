@@ -9,19 +9,21 @@ import { Loader } from '../../components/Loader'
 
 import { Grid, BannerContainer, CardListContainer, BigCardContainer } from './style'
 
-export const SetDetail = () => {
-  const { currentSet, cards, cardsLoading, fetchCards } = useContext(Context)
-  const { name, code } = currentSet
+export const SetDetail = ({ setCode }) => {
+  const { cards, cardsLoading, fetchCards, currentSet, isSetLoading, fetchSet } = useContext(Context)
 
   useEffect(() => {
-    fetchCards(code, 'setCode')
+    fetchSet(setCode)
+    fetchCards(setCode, 'setCode')
   }, [])
 
   return (
-    <Layout title={name || 'Set'}>
+    <Layout title={currentSet.name || 'Set'}>
       <Grid>
         <BannerContainer>
-          <SetBanner {...currentSet} />
+          {
+            isSetLoading ? <Loader /> : <SetBanner {...currentSet} />
+          }
         </BannerContainer>
         <CardListContainer>
           {

@@ -8,6 +8,7 @@ const Provider = ({ children }) => {
   const [currentCard, setCurrentCard] = useState({})
   const [cards, setCards] = useState([])
   const [currentSet, setCurrentSet] = useState({})
+  const [isSetLoading, setIsSetLoading] = useState(false)
   const [searchString, setSearchString] = useState('')
   const [cardsLoading, setCardsLoading] = useState(true)
 
@@ -24,6 +25,8 @@ const Provider = ({ children }) => {
     setCardsLoading,
     currentSet,
     setCurrentSet,
+    isSetLoading,
+    setIsSetLoading,
     fetchCards: async (enforcedString, searchType = 'name') => {
       setCardsLoading(true)
       try {
@@ -31,6 +34,16 @@ const Provider = ({ children }) => {
         const { data: { cards } } = await axios.get(`${apiUrl}/cards?${searchType}=${enforcedString || searchString}`) // this || is to ensure the request is done right
         setCards(cards)
         setCardsLoading(false)
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    fetchSet: async (setCode) => {
+      try {
+        setIsSetLoading(true)
+        const { data: { set } } = await axios.get(`${apiUrl}/sets/${setCode}`)
+        setCurrentSet(set)
+        setIsSetLoading(false)
       } catch (error) {
         console.log(error)
       }
