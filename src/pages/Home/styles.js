@@ -7,7 +7,6 @@ export const Grid = styled.div`
   grid-template-areas: 'search card'
                        'cards card';
   overflow: scroll;
-  padding: 0 10px;
 `
 
 export const SearchContainer = styled.div`
