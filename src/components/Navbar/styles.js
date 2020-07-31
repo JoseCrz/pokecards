@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { AiFillHome, AiFillStar } from 'react-icons/ai'
 import { IoMdOptions } from 'react-icons/io'
+import { BsCardList } from 'react-icons/bs'
 
 const generalStyle = `
   color: var(--text-white);
@@ -29,5 +30,9 @@ export const IconSettings = styled(IoMdOptions)`
   ${generalStyle}
 `
 export const IconFav = styled(AiFillStar)`
+  ${generalStyle}
+`
+
+export const SetsIncon = styled(BsCardList)`
   ${generalStyle}
 `

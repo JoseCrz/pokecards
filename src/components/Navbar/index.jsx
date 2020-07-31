@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from '@reach/router'
 
-import { Nav, Ul, IconHome, IconSettings, IconFav } from './styles'
+import { Nav, Ul, IconHome, IconSettings, IconFav, SetsIncon } from './styles'
 export const Navbar = () => {
   return (
     <Nav>
@@ -9,6 +9,11 @@ export const Navbar = () => {
         <li>
           <Link to='/'>
             <IconSettings />
+          </Link>
+        </li>
+        <li>
+          <Link to='/sets'>
+            <SetsIncon />
           </Link>
         </li>
         <li>
