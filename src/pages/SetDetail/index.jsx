@@ -1,16 +1,21 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Context } from '../../Context'
 
 import { Layout } from '../../components/Layout'
 import { SetBanner } from '../../components/SetBanner'
 import { CardList } from '../../components/CardList'
 import { BigCard } from '../../components/BigCard'
+import { Loader } from '../../components/Loader'
 
 import { Grid, BannerContainer, CardListContainer, BigCardContainer } from './style'
 
 export const SetDetail = () => {
-  const { currentSet } = useContext(Context)
-  const { name } = currentSet
+  const { currentSet, cards, cardsLoading, fetchCards } = useContext(Context)
+  const { name, code } = currentSet
+
+  useEffect(() => {
+    fetchCards(code, 'setCode')
+  }, [])
 
   return (
     <Layout title={name || 'Set'}>
@@ -19,7 +24,9 @@ export const SetDetail = () => {
           <SetBanner {...currentSet} />
         </BannerContainer>
         <CardListContainer>
-          <CardList />
+          {
+            cardsLoading ? <Loader /> : <CardList cards={cards} />
+          }
         </CardListContainer>
         <BigCardContainer>
           <BigCard />
