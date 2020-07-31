@@ -15,7 +15,7 @@ export const SetDetail = ({ setCode }) => {
   useEffect(() => {
     fetchSet(setCode)
     fetchCards(setCode, 'setCode')
-  }, [])
+  }, [setCode])
 
   return (
     <Layout title={currentSet.name || 'Set'}>
