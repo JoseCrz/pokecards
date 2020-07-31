@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import { Context } from '../../Context'
 
 import { InputSearch } from '../InputSearch'
-import { RadioButton } from '../RadioButton'
+import { LinkStyled } from '../LinkStyled'
 
-import { Container, H2, Arranger, Link } from './styles'
+import { Container, H2, Arranger } from './styles'
 
 export const Search = () => {
   const { searchString, setSearchString, fetchCards } = useContext(Context)
@@ -26,7 +26,7 @@ export const Search = () => {
           onKeyPress={handleOnKeyPress}
           placeholder='Name of card'
         />
-        <Link to='/sets'>Explore sets</Link>
+        <LinkStyled to='/sets'>Explore sets</LinkStyled>
       </Arranger>
     </Container>
   )
