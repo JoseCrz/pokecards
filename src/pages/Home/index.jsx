@@ -10,11 +10,10 @@ import { Grid, SearchContainer, CardContainer, CardsContainer } from './styles'
 
 export const Home = () => {
   const { cards, cardsLoading, fetchCards } = useContext(Context)
-  // TODO: FIX SetDetail to Home Cards Bug
-  // ! It has to do with the searchString state
 
   useEffect(() => {
-    fetchCards()
+    // the string with a space is to ensure Home cleans any other searchString
+    fetchCards(' ')
   }, [])
 
   return (
