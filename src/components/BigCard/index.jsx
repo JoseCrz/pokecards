@@ -2,12 +2,13 @@ import React, { useContext } from 'react'
 import { Context } from '../../Context'
 
 import { ActionButton } from '../ActionButton'
+import { LinkStyled } from '../LinkStyled'
 
 import { Card, ThumbImg, LoadedImage, H2, Top, Bottom } from './styles'
 
 export const BigCard = () => {
   const { currentCard, bigPictureLoaded, setBigPictureLoaded, fetchCards } = useContext(Context)
-  const { imageUrl, imageUrlHiRes, evolvesFrom, set } = currentCard
+  const { imageUrl, imageUrlHiRes, evolvesFrom, set, setCode } = currentCard
 
   const cardExists = Object.keys(currentCard).length > 0
 
@@ -37,7 +38,7 @@ export const BigCard = () => {
           cardExists && (
             <>
               {evolvesFrom && <ActionButton onClick={handleOnClick} label='Evolves from' item={evolvesFrom} />}
-              <ActionButton label='Set' item={set} />
+              <LinkStyled to={`/sets/${setCode}`}>{`Set: ${set}`}</LinkStyled>
             </>
           )
         }
