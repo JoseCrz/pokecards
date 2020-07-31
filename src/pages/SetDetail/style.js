@@ -6,6 +6,7 @@ export const Grid = styled.div`
   grid-template-rows: 150px 1fr;
   grid-template-areas: 'banner banner'
                        'cardList bigCard';
+  overflow: scroll;
 `
 
 export const BannerContainer = styled.div`
@@ -14,8 +15,11 @@ export const BannerContainer = styled.div`
 
 export const CardListContainer = styled.div`
   grid-area: cardList;
+  max-height: 100%;
+  overflow: scroll;
 `
 
 export const BigCardContainer = styled.div`
   grid-area: bigCard;
+  max-height: 100%;
 `
