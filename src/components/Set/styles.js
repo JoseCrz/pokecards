@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { fadeIn } from '../../styles/Animations'
 
 export const Container = styled.div`
   display: flex;
@@ -18,6 +19,7 @@ export const Container = styled.div`
   }
 `
 export const Img = styled.img`
+  ${fadeIn({ time: '2.5s' })}
   max-width: 60%;
   max-height: 80%;
   object-fit: cover;
