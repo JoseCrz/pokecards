@@ -13,7 +13,7 @@ export const SetDetail = () => {
   const { name } = currentSet
 
   return (
-    <Layout title={name || 'Set name'}>
+    <Layout title={name || 'Set'}>
       <Grid>
         <BannerContainer>
           <SetBanner {...currentSet} />
