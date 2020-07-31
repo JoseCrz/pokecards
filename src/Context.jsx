@@ -28,7 +28,7 @@ const Provider = ({ children }) => {
       setCardsLoading(true)
       try {
         if (enforcedString) setSearchString(enforcedString)
-        const { data: { cards } } = await axios.get(`${apiUrl}?${searchType}=${enforcedString || searchString}`) // this || is to ensure the request is done right
+        const { data: { cards } } = await axios.get(`${apiUrl}/cards?${searchType}=${enforcedString || searchString}`) // this || is to ensure the request is done right
         setCards(cards)
         setCardsLoading(false)
       } catch (error) {
