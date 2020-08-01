@@ -3,8 +3,9 @@ import { Context } from '../../Context'
 
 import { ActionButton } from '../ActionButton'
 import { LinkStyled } from '../LinkStyled'
+import { BigCardOptions } from '../BigCardOptions'
 
-import { Card, ThumbImg, LoadedImage, H2, Top, Bottom } from './styles'
+import { Card, ThumbImg, LoadedImage, H2, Top } from './styles'
 
 export const BigCard = () => {
   const { currentCard, bigPictureLoaded, setBigPictureLoaded, fetchCards } = useContext(Context)
@@ -33,7 +34,7 @@ export const BigCard = () => {
           ) : <H2>Select an image</H2>
         }
       </Top>
-      <Bottom>
+      <BigCardOptions>
         {
           cardExists && (
             <>
@@ -42,7 +43,7 @@ export const BigCard = () => {
             </>
           )
         }
-      </Bottom>
+      </BigCardOptions>
     </Card>
   )
 }
