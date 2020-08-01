@@ -11,7 +11,7 @@ export const Search = () => {
 
   const handleOnClick = async () => fetchCards()
 
-  const handleOnChange = ({ target }) => setSearchString(target.value)
+  const handleOnChange = ({ target }) => setSearchString(target.value.trim())
 
   const handleOnKeyPress = ({ charCode }) => charCode === 13 && fetchCards()
 

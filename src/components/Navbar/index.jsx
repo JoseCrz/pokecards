@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from '@reach/router'
+import { Context } from '../../Context'
 
 import { Nav, Ul, IconHome, IconSettings, IconFav, SetsIncon } from './styles'
 export const Navbar = () => {
+  const { setSearchString } = useContext(Context)
   return (
     <Nav>
       <Ul>
@@ -18,7 +20,7 @@ export const Navbar = () => {
         </li>
         <li>
           <Link to='/'>
-            <IconHome />
+            <IconHome onClick={() => setSearchString('')} />
           </Link>
         </li>
         <li>

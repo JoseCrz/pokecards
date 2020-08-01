@@ -13,7 +13,7 @@ export const Home = () => {
 
   useEffect(() => {
     // the string with a space is to ensure Home cleans any other searchString
-    fetchCards(' ')
+    fetchCards('')
   }, [])
 
   return (
