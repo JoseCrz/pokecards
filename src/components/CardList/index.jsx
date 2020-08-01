@@ -2,12 +2,13 @@ import React from 'react'
 
 import { Card } from '../Card'
 
+import { Container } from './styles'
 export const CardList = ({ cards = [] }) => {
   return (
-    <ul>
+    <Container>
       {
-        cards.map(card => <li key={card.id}> <Card card={card} /> </li>)
+        cards.map(card => <Card key={card.id} card={card} />)
       }
-    </ul>
+    </Container>
   )
 }

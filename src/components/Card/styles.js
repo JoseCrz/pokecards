@@ -23,7 +23,6 @@ export const Container = styled.div`
   background: var(--element);
   box-shadow: var(--shadow);
   position: relative;
-  margin: 10px;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   cursor: pointer;
 
