@@ -31,7 +31,7 @@ export const SetDetail = ({ setCode }) => {
           }
         </CardListContainer>
         <BigCardContainer>
-          <BigCard />
+          <BigCard showOptions={false} />
         </BigCardContainer>
       </Grid>
     </Layout>

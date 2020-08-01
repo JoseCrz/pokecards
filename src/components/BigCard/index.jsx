@@ -7,7 +7,7 @@ import { BigCardOptions } from '../BigCardOptions'
 
 import { Card, ThumbImg, LoadedImage, H2, Top } from './styles'
 
-export const BigCard = () => {
+export const BigCard = ({ showOptions = true }) => {
   const { currentCard, bigPictureLoaded, setBigPictureLoaded, fetchCards } = useContext(Context)
   const { imageUrl, imageUrlHiRes, evolvesFrom, set, setCode } = currentCard
 
@@ -34,16 +34,20 @@ export const BigCard = () => {
           ) : <H2>Select an image</H2>
         }
       </Top>
-      <BigCardOptions>
-        {
-          cardExists && (
-            <>
-              {evolvesFrom && <ActionButton onClick={handleOnClick} label='Evolves from' item={evolvesFrom} />}
-              <LinkStyled to={`/sets/${setCode}`}>{`Set: ${set}`}</LinkStyled>
-            </>
-          )
-        }
-      </BigCardOptions>
+      {
+        showOptions && (
+          <BigCardOptions>
+            {
+              cardExists && (
+                <>
+                  {evolvesFrom && <ActionButton onClick={handleOnClick} label='Evolves from' item={evolvesFrom} />}
+                  <LinkStyled to={`/sets/${setCode}`}>{`Set: ${set}`}</LinkStyled>
+                </>
+              )
+            }
+          </BigCardOptions>
+        )
+      }
     </Card>
   )
 }
