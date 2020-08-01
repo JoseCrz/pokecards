@@ -22,4 +22,6 @@ export const CardsContainer = styled.div`
 export const CardContainer = styled.div`
   grid-area: card;
   width: 100%;
+  display: grid;
+  align-items: center;
 `
