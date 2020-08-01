@@ -21,5 +21,5 @@ export const CardListContainer = styled.div`
 
 export const BigCardContainer = styled.div`
   grid-area: bigCard;
-  max-height: 100%;
+  width: 100%;
 `

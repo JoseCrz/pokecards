@@ -2,26 +2,24 @@ import styled from 'styled-components'
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 150px 1fr;
-  grid-template-areas: 'search card'
+  grid-template-areas: 'search .'
                        'cards card';
   overflow: scroll;
 `
 
 export const SearchContainer = styled.div`
   grid-area: search;
-  max-height: 100%;
-`
-
-export const CardContainer = styled.div`
-  grid-area: card;
-  max-height: 100%;
-  padding: 15px 0;
 `
 
 export const CardsContainer = styled.div`
   grid-area: cards;
   max-height: 100%;
   overflow: scroll;
+`
+
+export const CardContainer = styled.div`
+  grid-area: card;
+  width: 100%;
 `

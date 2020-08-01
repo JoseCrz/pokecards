@@ -5,7 +5,7 @@ export const Card = styled.div`
   border-radius: var(--border);
   background: var(--element);
   box-shadow: var(--shadow);
-  height: 100%;
+  padding-bottom: 141%;
   position: relative;
 `
 
@@ -24,7 +24,7 @@ export const Figure = styled.figure`
 
 const Img = styled.img`
   width: 100%;
-  height: 100%;
+  padding-bottom: 141%;
   position: absolute;
   top: 0;
   left: 0;
@@ -46,4 +46,5 @@ export const LoadedImage = styled(Img)`
 
 export const H2 = styled.h2`
   text-align: center;
+  margin: 0;
 `
