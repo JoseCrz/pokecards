@@ -5,7 +5,7 @@ import { ActionButton } from '../ActionButton'
 import { LinkStyled } from '../LinkStyled'
 import { BigCardOptions } from '../BigCardOptions'
 
-import { Card, ThumbImg, LoadedImage, H2, Top } from './styles'
+import { Card, ThumbImg, LoadedImage, H2, Top, Placeholder } from './styles'
 
 export const BigCard = ({ showOptions = true }) => {
   const { currentCard, bigPictureLoaded, setBigPictureLoaded, fetchCards } = useContext(Context)
@@ -23,31 +23,36 @@ export const BigCard = ({ showOptions = true }) => {
   }
 
   return (
-    <Card>
-      <Top>
-        {
-          cardExists ? (
-            <>
+    <>
+      {
+        cardExists ? (
+          <Card>
+            <Top>
               <ThumbImg src={imageUrl} isLoaded={bigPictureLoaded} />
               <LoadedImage onLoad={handleOnLoad} src={imageUrlHiRes} isLoaded={bigPictureLoaded} />
-            </>
-          ) : <H2>Select an image</H2>
-        }
-      </Top>
-      {
-        showOptions && (
-          <BigCardOptions>
+            </Top>
             {
-              cardExists && (
-                <>
-                  {evolvesFrom && <ActionButton onClick={handleOnClick} label='Evolves from' item={evolvesFrom} />}
-                  <LinkStyled to={`/sets/${setCode}`}>{`Set: ${set}`}</LinkStyled>
-                </>
+              showOptions && (
+                <BigCardOptions>
+                  {
+                    cardExists && (
+                      <>
+                        {evolvesFrom && <ActionButton onClick={handleOnClick} label='Evolves from' item={evolvesFrom} />}
+                        <LinkStyled to={`/sets/${setCode}`}>{`Set: ${set}`}</LinkStyled>
+                      </>
+                    )
+                  }
+                </BigCardOptions>
               )
             }
-          </BigCardOptions>
+          </Card>
+        ) : (
+          <Placeholder>
+            <H2>Select a card!</H2>
+          </Placeholder>
         )
       }
-    </Card>
+    </>
+
   )
 }

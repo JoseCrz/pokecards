@@ -47,4 +47,12 @@ export const LoadedImage = styled(Img)`
 export const H2 = styled.h2`
   text-align: center;
   margin: 0;
+  padding-top: 20px;
+`
+
+export const Placeholder = styled.div`
+  border: 2px solid gray;
+  border-radius: var(--border);
+  padding-bottom: 120%;
+  display: grid;
 `
