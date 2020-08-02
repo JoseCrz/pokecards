@@ -4,6 +4,8 @@ import { Router } from '@reach/router'
 import { Home } from './pages/Home'
 import { Sets } from './pages/Sets'
 import { SetDetail } from './pages/SetDetail'
+import { Favorites } from './pages/Favorites'
+import { Settings } from './pages/Settings'
 
 import { GlobalStyle } from './styles/GlobalStyle'
 
@@ -15,6 +17,8 @@ export const App = () => {
         <Home path='/' />
         <Sets path='/sets' />
         <SetDetail path='/sets/:setCode' />
+        <Settings path='/settings' />
+        <Favorites path='/favs' />
       </Router>
     </>
   )
