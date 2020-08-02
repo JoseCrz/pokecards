@@ -9,9 +9,10 @@ import { Loader } from '../../components/Loader'
 import { Grid, SearchContainer, CardContainer, CardsContainer } from './styles'
 
 export const Home = () => {
-  const { cards, cardsLoading, fetchCards } = useContext(Context)
+  const { cards, cardsLoading, setCurrentCard, fetchCards } = useContext(Context)
 
   useEffect(() => {
+    setCurrentCard({})
     // the string with a space is to ensure Home cleans any other searchString
     fetchCards('')
   }, [])
