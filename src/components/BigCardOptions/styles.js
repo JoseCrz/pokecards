@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   position: absolute;
-  bottom: ${({ isMinimized }) => isMinimized ? '-50px' : '0'};
+  bottom: ${({ isMinimized }) => isMinimized ? '-10%' : '0'};
   width: 100%;
   height: 10%;
   background: var(--element);
