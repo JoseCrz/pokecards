@@ -4,6 +4,7 @@ import { Context } from '../../Context'
 import { FavButton } from '../FavButton'
 
 import { useNearScreen } from '../../hooks/useNearScreen'
+import { addFav } from '../../utils/favUtils'
 
 import { Container, Img, Figure } from './styles'
 
@@ -24,12 +25,7 @@ export const Card = ({ card }) => {
     }
   }
 
-  const handleFav = () => {
-    // TODO: Duplicate handling
-    const favs = JSON.parse(window.localStorage.getItem('favs')) || []
-    favs.push(card)
-    window.localStorage.setItem('favs', JSON.stringify(favs))
-  }
+  const handleFav = () => addFav({ card })
 
   return (
     <Container onClick={handleOnClick} ref={element}>

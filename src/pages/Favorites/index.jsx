@@ -4,10 +4,12 @@ import { Layout } from '../../components/Layout'
 import { CardList } from '../../components/CardList'
 import { BigCard } from '../../components/BigCard'
 
+import { getFavs } from '../../utils/favUtils'
+
 import { Grid, BannerContainer, CardListContainer, BigCardContainer } from './styles'
 
 export const Favorites = () => {
-  const [favs, setFavs] = useState(JSON.parse(window.localStorage.getItem('favs')) || [])
+  const [favs] = useState(getFavs())
 
   return (
     <Layout title='Favorites'>
