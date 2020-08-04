@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Button, IconFavs } from './styles'
 
-export const FavButton = () => {
+export const FavButton = ({ onClick }) => {
   return (
-    <Button>
+    <Button onClick={onClick}>
       <IconFavs />
     </Button>
   )

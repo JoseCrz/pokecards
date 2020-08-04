@@ -24,12 +24,19 @@ export const Card = ({ card }) => {
     }
   }
 
+  const handleFav = () => {
+    // TODO: Duplicate handling
+    const favs = JSON.parse(window.localStorage.getItem('favs')) || []
+    favs.push(card)
+    window.localStorage.setItem('favs', JSON.stringify(favs))
+  }
+
   return (
     <Container onClick={handleOnClick} ref={element}>
       {
         show &&
           <>
-            <FavButton />
+            <FavButton onClick={handleFav} />
             <Figure>
               <Img loading={loading} src={card.imageUrl} onLoad={() => setLoading(false)} alt='' />
             </Figure>
