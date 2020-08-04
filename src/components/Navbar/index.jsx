@@ -15,7 +15,7 @@ import { Context } from '../../Context'
 
 import { Nav, Ul, Li, Div } from './styles'
 export const Navbar = () => {
-  const { setSearchString } = useContext(Context)
+  const { setSearchString, setCurrentCard } = useContext(Context)
 
   return (
     <IconContext.Provider value={{ color: 'white', size: '36px' }}>
@@ -37,7 +37,7 @@ export const Navbar = () => {
               </Link>
             </Li>
             <Li>
-              <Link to='/favs'>
+              <Link to='/favs' onClick={() => setCurrentCard({})}>
                 {
                   window.location.pathname.includes('/favs') ? <IconFavsFull /> : <IconFavs />
                 }
