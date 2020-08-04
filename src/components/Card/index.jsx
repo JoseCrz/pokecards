@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react'
 import { Context } from '../../Context'
 
+import { FavButton } from '../FavButton'
+
 import { useNearScreen } from '../../hooks/useNearScreen'
 
 import { Container, Img, Figure } from './styles'
@@ -26,9 +28,12 @@ export const Card = ({ card }) => {
     <Container onClick={handleOnClick} ref={element}>
       {
         show &&
-          <Figure>
-            <Img loading={loading} src={card.imageUrl} onLoad={() => setLoading(false)} alt='' />
-          </Figure>
+          <>
+            <FavButton />
+            <Figure>
+              <Img loading={loading} src={card.imageUrl} onLoad={() => setLoading(false)} alt='' />
+            </Figure>
+          </>
       }
     </Container>
   )

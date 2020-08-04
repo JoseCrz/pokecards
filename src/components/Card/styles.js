@@ -32,8 +32,8 @@ export const Container = styled.div`
     z-index: 99;
   }
 
-  &:hover ${Details} {
-    opacity: 1
+  &:hover button {
+    opacity: 1;
   }
 `
 
