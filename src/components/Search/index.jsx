@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { Context } from '../../Context'
 
 import { InputSearch } from '../InputSearch'
-import { LinkStyled } from '../LinkStyled'
 
 import { Container, H2, Arranger } from './styles'
 
@@ -26,7 +25,6 @@ export const Search = () => {
           onKeyPress={handleOnKeyPress}
           placeholder='Name of card'
         />
-        <LinkStyled to='/sets'>Explore sets</LinkStyled>
       </Arranger>
     </Container>
   )
