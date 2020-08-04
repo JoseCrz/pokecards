@@ -13,7 +13,7 @@ import {
 import { BsCollection as IconSets, BsFillCollectionFill as IconSetsFull } from 'react-icons/bs'
 import { Context } from '../../Context'
 
-import { Nav, Ul } from './styles'
+import { Nav, Ul, Li, Div } from './styles'
 export const Navbar = () => {
   const { setSearchString } = useContext(Context)
 
@@ -21,34 +21,36 @@ export const Navbar = () => {
     <IconContext.Provider value={{ color: 'white', size: '36px' }}>
       <Nav>
         <Ul>
-          <li>
+          <Div>
+            <Li>
+              <Link to='/' onClick={() => setSearchString('')}>
+                {
+                  window.location.pathname === '/' ? <IconHomeFull /> : <IconHome />
+                }
+              </Link>
+            </Li>
+            <Li>
+              <Link to='/sets'>
+                {
+                  window.location.pathname.includes('/sets') ? <IconSetsFull /> : <IconSets />
+                }
+              </Link>
+            </Li>
+            <Li>
+              <Link to='/favs'>
+                {
+                  window.location.pathname.includes('/favs') ? <IconFavsFull /> : <IconFavs />
+                }
+              </Link>
+            </Li>
+          </Div>
+          <Li>
             <Link to='/settings'>
               {
                 window.location.pathname.includes('/settings') ? <IconSettingsFull /> : <IconSettings />
               }
             </Link>
-          </li>
-          <li>
-            <Link to='/sets'>
-              {
-                window.location.pathname.includes('/sets') ? <IconSetsFull /> : <IconSets />
-              }
-            </Link>
-          </li>
-          <li>
-            <Link to='/' onClick={() => setSearchString('')}>
-              {
-                window.location.pathname === '/' ? <IconHomeFull /> : <IconHome />
-              }
-            </Link>
-          </li>
-          <li>
-            <Link to='/favs'>
-              {
-                window.location.pathname.includes('/favs') ? <IconFavsFull /> : <IconFavs />
-              }
-            </Link>
-          </li>
+          </Li>
         </Ul>
       </Nav>
     </IconContext.Provider>

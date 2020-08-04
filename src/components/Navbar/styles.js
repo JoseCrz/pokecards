@@ -13,3 +13,14 @@ export const Ul = styled.ul`
   align-items: center;
   padding: 20px 0;
 `
+
+export const Li = styled.li`
+  margin: 10px 0;
+`
+
+export const Div = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
