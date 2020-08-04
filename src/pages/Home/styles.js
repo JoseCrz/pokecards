@@ -4,7 +4,7 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 150px 1fr;
-  grid-template-areas: 'search .'
+  grid-template-areas: 'cards search'
                        'cards card';
   overflow: scroll;
 `
