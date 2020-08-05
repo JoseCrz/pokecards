@@ -10,9 +10,10 @@ import { Loader } from '../../components/Loader'
 import { Grid, BannerContainer, CardListContainer, BigCardContainer } from './style'
 
 export const SetDetail = ({ setCode }) => {
-  const { cards, cardsLoading, fetchCards, currentSet, isSetLoading, fetchSet } = useContext(Context)
+  const { cards, cardsLoading, fetchCards, currentSet, isSetLoading, fetchSet, setIsFav } = useContext(Context)
 
   useEffect(() => {
+    setIsFav(false)
     fetchSet(setCode)
     fetchCards(setCode, 'setCode')
   }, [setCode])

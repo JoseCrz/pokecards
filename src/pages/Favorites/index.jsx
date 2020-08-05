@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useContext } from 'react'
+
+import { Context } from '../../Context'
 
 import { Layout } from '../../components/Layout'
 import { CardList } from '../../components/CardList'
 import { BigCard } from '../../components/BigCard'
 
-import { getFavs } from '../../utils/favUtils'
-
 import { Grid, BannerContainer, CardListContainer, BigCardContainer } from './styles'
 
 export const Favorites = () => {
-  const [favs] = useState(getFavs())
+  const { favs, setIsFav } = useContext(Context)
+  useEffect(() => setIsFav(true), [])
 
   return (
     <Layout title='Favorites'>
@@ -19,7 +20,7 @@ export const Favorites = () => {
         </BannerContainer>
         <CardListContainer>
           {
-            favs.length > 0 ? <CardList cards={favs} isFav /> : <h2>Looks like you don't have favorites yet</h2>
+            favs.length > 0 ? <CardList cards={favs} /> : <h2>Looks like you don't have favorites yet</h2>
           }
         </CardListContainer>
         <BigCardContainer>
