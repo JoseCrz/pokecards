@@ -41,6 +41,11 @@ const Provider = ({ children }) => {
         setFavs(newFavs)
       }
     },
+    deleteFav: ({ card }) => {
+      const newFavs = favs.filter(fav => fav.id !== card.id)
+      window.localStorage.setItem('favs', JSON.stringify(newFavs))
+      setFavs(newFavs)
+    },
     fetchCards: async (enforcedString, searchType = 'name') => {
       setCardsLoading(true)
       try {
