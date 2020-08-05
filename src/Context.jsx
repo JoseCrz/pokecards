@@ -11,6 +11,8 @@ const Provider = ({ children }) => {
   const [isSetLoading, setIsSetLoading] = useState(false)
   const [searchString, setSearchString] = useState('')
   const [cardsLoading, setCardsLoading] = useState(true)
+  const [favs, setFavs] = useState(() => JSON.parse(window.localStorage.getItem('favs')) || [])
+  const [isFav, setIsFav] = useState(false)
 
   const value = {
     bigPictureLoaded,
@@ -27,6 +29,18 @@ const Provider = ({ children }) => {
     setCurrentSet,
     isSetLoading,
     setIsSetLoading,
+    isFav,
+    setIsFav,
+    favs,
+    addFav: ({ card }) => {
+      const ids = favs.map(fav => fav.id)
+
+      if (!ids.includes(card.id)) {
+        const newFavs = [...favs, card]
+        window.localStorage.setItem('favs', JSON.stringify(newFavs))
+        setFavs(newFavs)
+      }
+    },
     fetchCards: async (enforcedString, searchType = 'name') => {
       setCardsLoading(true)
       try {
