@@ -18,9 +18,19 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   z-index: 999;
+  outline:none;
+  
+  &:hover {
+    box-shadow: var(--shadow--big);
+    transform: scale(1.1);
+  }
 `
 
 export const IconFavs = styled(AiOutlineStar)`
+  color: #fdd835;
+  font-size: 48px;
+`
+export const IconFavsFull = styled(AiFillStar)`
   color: #fdd835;
   font-size: 48px;
 `

@@ -31,7 +31,7 @@ export const Card = ({ card }) => {
       {
         show &&
           <>
-            <FavButton onClick={handleFav} isFav={isFav} />
+            <FavButton onClick={handleFav} isFav={isFav} cardId={card.id} />
             <Figure onClick={handleOnClick}>
               <Img loading={loading} src={card.imageUrl} onLoad={() => setLoading(false)} alt='' />
             </Figure>

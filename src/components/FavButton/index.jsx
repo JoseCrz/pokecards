@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../Context'
+import { Button, IconFavs, IconFavsFull, DeleteFav } from './styles'
 
-import { Button, IconFavs, DeleteFav } from './styles'
+export const FavButton = ({ onClick, isFav, cardId }) => {
+  const { favs } = useContext(Context)
 
-export const FavButton = ({ onClick, isFav }) => {
+  if (isFav) {
+    return (
+      <Button onClick={onClick}>
+        <DeleteFav />
+      </Button>
+    )
+  }
+
   return (
     <Button onClick={onClick}>
       {
-        isFav ? <DeleteFav /> : <IconFavs />
+        favs.map(fav => fav.id).includes(cardId) ? <IconFavsFull /> : <IconFavs />
       }
     </Button>
   )
