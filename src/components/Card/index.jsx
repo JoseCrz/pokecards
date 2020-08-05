@@ -27,12 +27,12 @@ export const Card = ({ card }) => {
   const handleFav = () => isFav ? deleteFav({ card }) : addFav({ card })
 
   return (
-    <Container onClick={handleOnClick} ref={element}>
+    <Container ref={element}>
       {
         show &&
           <>
             <FavButton onClick={handleFav} isFav={isFav} />
-            <Figure>
+            <Figure onClick={handleOnClick}>
               <Img loading={loading} src={card.imageUrl} onLoad={() => setLoading(false)} alt='' />
             </Figure>
           </>
