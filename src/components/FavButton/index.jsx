@@ -1,11 +1,13 @@
 import React from 'react'
 
-import { Button, IconFavs } from './styles'
+import { Button, IconFavs, DeleteFav } from './styles'
 
-export const FavButton = ({ onClick }) => {
+export const FavButton = ({ onClick, isFav = false }) => {
   return (
     <Button onClick={onClick}>
-      <IconFavs />
+      {
+        isFav ? <DeleteFav /> : <IconFavs />
+      }
     </Button>
   )
 }

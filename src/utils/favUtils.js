@@ -11,3 +11,9 @@ export const addFav = ({ card }) => {
 }
 
 export const getFavs = () => JSON.parse(window.localStorage.getItem('favs')) || []
+
+export const deleteFav = ({ card }) => {
+  const favs = JSON.parse(window.localStorage.getItem('favs')) || []
+  const newFavs = favs.filter(fav => fav.id !== card.id)
+  window.localStorage.setItem('favs', JSON.stringify(newFavs))
+}

@@ -4,11 +4,11 @@ import { Context } from '../../Context'
 import { FavButton } from '../FavButton'
 
 import { useNearScreen } from '../../hooks/useNearScreen'
-import { addFav } from '../../utils/favUtils'
+import { addFav, deleteFav } from '../../utils/favUtils'
 
 import { Container, Img, Figure } from './styles'
 
-export const Card = ({ card }) => {
+export const Card = ({ card, isFav }) => {
   const [loading, setLoading] = useState(true)
   const { currentCard, setCurrentCard, setBigPictureLoaded } = useContext(Context)
   const [show, element] = useNearScreen()
@@ -25,14 +25,14 @@ export const Card = ({ card }) => {
     }
   }
 
-  const handleFav = () => addFav({ card })
+  const handleFav = () => isFav ? deleteFav({ card }) : addFav({ card })
 
   return (
     <Container onClick={handleOnClick} ref={element}>
       {
         show &&
           <>
-            <FavButton onClick={handleFav} />
+            <FavButton onClick={handleFav} isFav />
             <Figure>
               <Img loading={loading} src={card.imageUrl} onLoad={() => setLoading(false)} alt='' />
             </Figure>

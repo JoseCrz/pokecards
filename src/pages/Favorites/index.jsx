@@ -19,7 +19,7 @@ export const Favorites = () => {
         </BannerContainer>
         <CardListContainer>
           {
-            favs.length > 0 ? <CardList cards={favs} /> : <h2>Looks like you don't have favorites yet</h2>
+            favs.length > 0 ? <CardList cards={favs} isFav /> : <h2>Looks like you don't have favorites yet</h2>
           }
         </CardListContainer>
         <BigCardContainer>

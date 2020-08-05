@@ -1,8 +1,6 @@
 import styled from 'styled-components'
-import {
-  AiOutlineStar,
-  AiFillStar
-} from 'react-icons/ai'
+import { AiOutlineStar, AiFillStar } from 'react-icons/ai'
+import { TiDeleteOutline } from 'react-icons/ti'
 
 export const Button = styled.button`
   background: var(--element);
@@ -24,5 +22,10 @@ export const Button = styled.button`
 
 export const IconFavs = styled(AiOutlineStar)`
   color: #fdd835;
+  font-size: 48px;
+`
+
+export const DeleteFav = styled(TiDeleteOutline)`
+  color: #d81b60;
   font-size: 48px;
 `
