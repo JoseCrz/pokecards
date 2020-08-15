@@ -15,6 +15,5 @@ export const PaletteListContainer = styled.div`
 
   ${phone} {
     width: 100vw;
-    padding: 0 15px;
   }
 `
