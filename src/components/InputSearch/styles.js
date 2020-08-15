@@ -16,12 +16,12 @@ export const Input = styled.input`
   width: 80%;
 
   &:focus {
-    outline-color: var(--primary);
+    outline-color: var(--accent);
   }
 `
 
 export const Button = styled.button`
-  background: var(--primary);
+  background: var(--accent);
   display: flex;
   justify-content: center;
   align-items: center;
