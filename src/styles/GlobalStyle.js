@@ -28,6 +28,13 @@ ${({ theme }) => css`
     background: var(--background);
   }
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--text);
+  }
+
   button,
   input,
   select,
