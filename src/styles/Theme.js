@@ -68,5 +68,23 @@ export const Theme = {
       shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
       shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
     }
+  },
+  pearl: {
+    name: 'Pearl',
+    colors: {
+      background: '#DBE2F5',
+      primary: '#995E9A',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#2D0A2F',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#FDEEED',
+      accent: '#F49D99'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
   }
 }
