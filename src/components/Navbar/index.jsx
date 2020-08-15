@@ -18,7 +18,7 @@ export const Navbar = () => {
   const { setSearchString, setCurrentCard } = useContext(Context)
 
   return (
-    <IconContext.Provider value={{ color: 'white', size: '36px' }}>
+    <IconContext.Provider value={{ color: 'var(--icon)', size: '36px' }}>
       <Nav>
         <Ul>
           <Div>
