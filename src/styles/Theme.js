@@ -106,5 +106,23 @@ export const Theme = {
       shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
       shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
     }
+  },
+  emerald: {
+    name: 'Emerald',
+    colors: {
+      background: '#F4F9F1',
+      primary: '#386D55',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#2D4142',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#E4F1EB',
+      accent: '#FFC108'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
   }
 }
