@@ -20,15 +20,15 @@ export const Theme = {
   fireRed: {
     name: 'Fire Red',
     colors: {
-      background: '#FFFFFA',
-      primary: '#890620',
+      background: '#FCF4EE',
+      primary: '#D9552C',
       primaryLight: '#ECF9FF',
       element: '#FFF',
-      text: '#353535',
+      text: '#2C252D',
       textWhite: '#FFF',
       textStrong: '#353535',
-      icon: '#FFD6D9',
-      accent: '#FFAE03'
+      icon: '#F9E3DC',
+      accent: '#438EAA'
     },
     shadows: {
       shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
