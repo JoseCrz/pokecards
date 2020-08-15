@@ -124,5 +124,41 @@ export const Theme = {
       shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
       shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
     }
+  },
+  ruby: {
+    name: 'Ruby',
+    colors: {
+      background: '#FEFEFE',
+      primary: '#A32A1E',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#221D1A',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#F9DFDD',
+      accent: '#FFC108'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
+  },
+  sapphire: {
+    name: 'Sapphire',
+    colors: {
+      background: '#EAEFF3',
+      primary: '#19559F',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#183453',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#CADEF7',
+      accent: '#DA3945'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
   }
 }
