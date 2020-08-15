@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { phone } from '../../styles/MediaQueries'
 
 export const Container = styled.div`
   display: grid;
@@ -6,4 +7,8 @@ export const Container = styled.div`
   grid-auto-rows: 150px;
   gap: 15px;
   padding: 15px;
+
+  ${phone} {
+    grid-template-columns: 1fr  1fr;
+  }
 `
