@@ -43,7 +43,7 @@ export const Theme = {
       text: '#353535',
       textWhite: '#FFF',
       textStrong: '#353535',
-      icon: '#FF5964',
+      icon: '#FFD6D9',
       accent: '#FFAE03'
     },
     shadows: {
@@ -61,7 +61,7 @@ export const Theme = {
       text: '#442B48',
       textWhite: '#FFF',
       textStrong: '#353535',
-      icon: '#4CB944',
+      icon: '#E2F4E1',
       accent: '#861657'
     },
     shadows: {
