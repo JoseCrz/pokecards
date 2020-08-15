@@ -15,6 +15,7 @@ ${({ theme }) => css`
     --border: 6px;
     --shadow: ${theme.shadows.shadow};
     --shadow--big: ${theme.shadows.shadowBig};
+    --accent: ${theme.colors.accent};
   }
   
   * {
