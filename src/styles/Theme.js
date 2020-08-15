@@ -38,15 +38,15 @@ export const Theme = {
   leafGreen: {
     name: 'Leaf Green',
     colors: {
-      background: '#FDFFFC',
-      primary: '#254D32',
+      background: '#E0F5F5',
+      primary: '#96C843',
       primaryLight: '#ECF9FF',
       element: '#FFF',
-      text: '#442B48',
+      text: '#2B3E4F',
       textWhite: '#FFF',
       textStrong: '#353535',
-      icon: '#E2F4E1',
-      accent: '#861657'
+      icon: '#EDF6DF',
+      accent: '#A94C54'
     },
     shadows: {
       shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
