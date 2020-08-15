@@ -88,5 +88,23 @@ export const Theme = {
       shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
       shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
     }
+  },
+  gold: {
+    name: 'Heart Gold',
+    colors: {
+      background: '#FEF7EB',
+      primary: '#E87034',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#272323',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#FDF2ED',
+      accent: '#8EBC4E'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
   }
 }
