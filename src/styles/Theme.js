@@ -1,4 +1,40 @@
 export const Theme = {
+  pearl: {
+    name: 'Pearl',
+    colors: {
+      background: '#DBE2F5',
+      primary: '#995E9A',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#2D0A2F',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#FDEEED',
+      accent: '#F49D99'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
+  },
+  diamond: {
+    name: 'Diamond',
+    colors: {
+      background: '#E4EBF1',
+      primary: '#40587D',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#031D24',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#E0E6F5',
+      accent: '#2C478E'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
+  },
   platinum: {
     name: 'Platinum',
     colors: {
@@ -15,6 +51,60 @@ export const Theme = {
     shadows: {
       shadow: '-2px -2px 6px #383b40, 6px 6px 6px rgba(0,0,0,.24)',
       shadowBig: '-2px -2px 6px #383b40, 6px 6px 6px rgba(0,0,0,.24)'
+    }
+  },
+  ruby: {
+    name: 'Ruby',
+    colors: {
+      background: '#FEFEFE',
+      primary: '#A32A1E',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#221D1A',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#F9DFDD',
+      accent: '#FFC108'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
+  },
+  sapphire: {
+    name: 'Sapphire',
+    colors: {
+      background: '#EAEFF3',
+      primary: '#19559F',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#183453',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#CADEF7',
+      accent: '#DA3945'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
+  },
+  emerald: {
+    name: 'Emerald',
+    colors: {
+      background: '#F4F9F1',
+      primary: '#386D55',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#2D4142',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#E4F1EB',
+      accent: '#FFC108'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
     }
   },
   fireRed: {
@@ -53,42 +143,7 @@ export const Theme = {
       shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
     }
   },
-  pearl: {
-    name: 'Pearl',
-    colors: {
-      background: '#DBE2F5',
-      primary: '#995E9A',
-      primaryLight: '#ECF9FF',
-      element: '#FFF',
-      text: '#2D0A2F',
-      textWhite: '#FFF',
-      textStrong: '#353535',
-      icon: '#FDEEED',
-      accent: '#F49D99'
-    },
-    shadows: {
-      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
-    }
-  },
-  diamond: {
-    name: 'Diamond',
-    colors: {
-      background: '#E4EBF1',
-      primary: '#40587D',
-      primaryLight: '#ECF9FF',
-      element: '#FFF',
-      text: '#031D24',
-      textWhite: '#FFF',
-      textStrong: '#353535',
-      icon: '#E0E6F5',
-      accent: '#2C478E'
-    },
-    shadows: {
-      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
-    }
-  },
+
   gold: {
     name: 'Heart Gold',
     colors: {
@@ -106,59 +161,6 @@ export const Theme = {
       shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
       shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
     }
-  },
-  emerald: {
-    name: 'Emerald',
-    colors: {
-      background: '#F4F9F1',
-      primary: '#386D55',
-      primaryLight: '#ECF9FF',
-      element: '#FFF',
-      text: '#2D4142',
-      textWhite: '#FFF',
-      textStrong: '#353535',
-      icon: '#E4F1EB',
-      accent: '#FFC108'
-    },
-    shadows: {
-      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
-    }
-  },
-  ruby: {
-    name: 'Ruby',
-    colors: {
-      background: '#FEFEFE',
-      primary: '#A32A1E',
-      primaryLight: '#ECF9FF',
-      element: '#FFF',
-      text: '#221D1A',
-      textWhite: '#FFF',
-      textStrong: '#353535',
-      icon: '#F9DFDD',
-      accent: '#FFC108'
-    },
-    shadows: {
-      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
-    }
-  },
-  sapphire: {
-    name: 'Sapphire',
-    colors: {
-      background: '#EAEFF3',
-      primary: '#19559F',
-      primaryLight: '#ECF9FF',
-      element: '#FFF',
-      text: '#183453',
-      textWhite: '#FFF',
-      textStrong: '#353535',
-      icon: '#CADEF7',
-      accent: '#DA3945'
-    },
-    shadows: {
-      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
-    }
   }
+
 }
