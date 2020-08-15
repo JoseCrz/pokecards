@@ -1,11 +1,12 @@
 import React from 'react'
 
 import { Layout } from '../../components/Layout'
+import { ThemeSwitcher } from '../../components/ThemeSwitcher'
 
 export const Settings = () => {
   return (
     <Layout title='Settings'>
-      <h1>Coming soon...</h1>
+      <ThemeSwitcher />
     </Layout>
   )
 }
