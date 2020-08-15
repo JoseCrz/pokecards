@@ -1,15 +1,16 @@
 export const Theme = {
-  dark: {
-    name: 'Dark',
+  platinum: {
+    name: 'Platinum',
     colors: {
-      background: '#232528',
-      primary: '#C7D732',
+      background: '#25252D',
+      primary: '#D44E45',
       primaryLight: '#ECF9FF',
-      element: '#232528',
-      text: '#E9EAEA',
+      element: '#645F73',
+      text: '#F1F1F1',
       textWhite: '#FFF',
       textStrong: '#F1F1F1',
-      icon: '#B2B3B4'
+      icon: '#F7E0DE',
+      accent: '#E0BE59'
     },
     shadows: {
       shadow: '-2px -2px 6px #383b40, 6px 6px 6px rgba(0,0,0,.24)',
