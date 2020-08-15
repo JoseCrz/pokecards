@@ -6,7 +6,7 @@ export const ThemeContext = createContext()
 
 const Provider = ({ children }) => {
   const [themeMode, setThemeMode] = useState(
-    window.localStorage.getItem('theme') || 'light'
+    window.localStorage.getItem('theme') || 'pearl'
   )
 
   useEffect(() => {

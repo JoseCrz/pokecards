@@ -1,21 +1,4 @@
 export const Theme = {
-  light: {
-    name: 'Light',
-    colors: {
-      background: '#F3F5FD',
-      primary: '#495DE3',
-      primaryLight: '#ECF9FF',
-      element: '#FFF',
-      text: '#252525',
-      textWhite: '#FFF',
-      textStrong: '#00087F',
-      icon: '#2B316C'
-    },
-    shadows: {
-      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
-    }
-  },
   dark: {
     name: 'Dark',
     colors: {
@@ -81,6 +64,24 @@ export const Theme = {
       textStrong: '#353535',
       icon: '#FDEEED',
       accent: '#F49D99'
+    },
+    shadows: {
+      shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      shadowBig: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+    }
+  },
+  diamond: {
+    name: 'Diamond',
+    colors: {
+      background: '#E4EBF1',
+      primary: '#40587D',
+      primaryLight: '#ECF9FF',
+      element: '#FFF',
+      text: '#031D24',
+      textWhite: '#FFF',
+      textStrong: '#353535',
+      icon: '#E0E6F5',
+      accent: '#2C478E'
     },
     shadows: {
       shadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
