@@ -11,7 +11,7 @@ export const Button = styled.button`
   transition: cubic-bezier(0.215, 0.610, 0.355, 1) .2s;
 
   &:hover {
-    background: var(--primary);
+    background: var(--accent);
     color: var(--text-white);
   }
 `
