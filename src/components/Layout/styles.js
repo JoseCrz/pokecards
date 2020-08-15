@@ -9,6 +9,5 @@ export const Arranger = styled.div`
 export const Main = styled.main`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
   padding: 10px 20px 0 0;
 `
