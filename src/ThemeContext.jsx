@@ -1,25 +1,30 @@
-import React, { useState, createContext } from 'react'
+import React, { useState, useEffect, createContext } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Theme } from './styles/Theme'
 
 export const ThemeContext = createContext()
 
 const Provider = ({ children }) => {
-  const [themeMode, setThemeMode] = useState('light')
-  console.log(Theme[themeMode])
+  const [themeMode, setThemeMode] = useState(
+    window.localStorage.getItem('theme') || 'light'
+  )
 
-  const customTheme = Theme[themeMode]
+  useEffect(() => {
+    window.localStorage.setItem('theme', themeMode)
+  }, [themeMode])
+
+  const currentTheme = Theme[themeMode]
 
   const value = {
     themeMode,
-    toggleTheme: () => {
-      setThemeMode(prevState => prevState === 'light' ? 'dark' : 'light')
+    selectTheme: ({ themeId }) => {
+      setThemeMode(themeId)
     }
   }
 
   return (
     <ThemeContext.Provider value={value}>
-      <ThemeProvider theme={customTheme}>
+      <ThemeProvider theme={currentTheme}>
         {
           children
         }
