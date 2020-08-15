@@ -23,7 +23,7 @@ export const P = styled.p`
 
 export const Colors = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 `
 
 export const Color = styled.div`

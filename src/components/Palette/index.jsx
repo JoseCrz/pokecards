@@ -13,7 +13,6 @@ export const Palette = ({ themeId, name, colors }) => {
       <Colors>
         <Color color={colors.background} />
         <Color color={colors.primary} />
-        <Color color={colors.icon} />
         <Color color={colors.accent || '#FAFAFA'} />
         <Color color={colors.text} />
       </Colors>
