@@ -3,17 +3,17 @@ import React from 'react'
 import { Layout } from '../../components/Layout'
 import { PaletteList } from '../../components/PaletteList'
 
-import { H1, ListGrid } from './styles'
+import { H1, PaletteListContainer, Container } from './styles'
 
 export const Settings = () => {
   return (
     <Layout title='Settings'>
-      <div>
+      <Container>
         <H1>Select a theme</H1>
-        <ListGrid>
+        <PaletteListContainer>
           <PaletteList />
-        </ListGrid>
-      </div>
+        </PaletteListContainer>
+      </Container>
     </Layout>
   )
 }
