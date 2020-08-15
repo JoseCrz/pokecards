@@ -1,19 +1,20 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  :root {
-    --background: #F3F5FD;
+${({ theme }) => css`
+:root {
+    --background: ${theme.colors.background};
     /* --primary: #2C3BDC; */
-    --primary: #495DE3;
-    --primary--light: #ECF9FF;
-    --element: #FFF;
-    --text: #252525;
-    --text-white: #FFF;
-    --text-strong: #00087F;
-    --icon: #2B316C;
+    --primary: ${theme.colors.primary};
+    --primary--light: ${theme.colors.primaryLight};
+    --element: ${theme.colors.element};
+    --text: ${theme.colors.text};
+    --text-white: ${theme.colors.textWhite};
+    --text-strong: ${theme.colors.textStrong};
+    --icon: ${theme.colors.icon};
     --border: 6px;
-    --shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    --shadow--big: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    --shadow: ${theme.shadows.shadow};
+    --shadow--big: ${theme.shadows.shadowBig};
   }
   
   * {
@@ -146,4 +147,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0.2em 0;
   }
 
+
+`}
 `
