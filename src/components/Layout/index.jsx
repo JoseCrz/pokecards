@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Helmet } from 'react-helmet'
 
+import { Context } from '../../Context'
+
 import { Navbar } from '../Navbar'
+import { BigCardModal } from '../BigCardModal'
 
 import { Arranger, Main } from './styles'
 
 export const Layout = ({ children, title, header }) => {
+  const { isModalOpen } = useContext(Context)
+
   return (
     <>
       <Helmet>
@@ -20,6 +25,7 @@ export const Layout = ({ children, title, header }) => {
           }
         </Main>
       </Arranger>
+      <BigCardModal isOpen={isModalOpen} />
     </>
   )
 }

@@ -5,12 +5,11 @@ import { Search } from '../../components/Search'
 import { CardList } from '../../components/CardList'
 import { BigCard } from '../../components/BigCard'
 import { Loader } from '../../components/Loader'
-import { BigCardModal } from '../../components/BigCardModal'
 
 import { Grid, SearchContainer, CardContainer, CardsContainer } from './styles'
 
 export const Home = () => {
-  const { cards, cardsLoading, setCurrentCard, fetchCards, setIsFav, isModalOpen } = useContext(Context)
+  const { cards, cardsLoading, setCurrentCard, fetchCards, setIsFav } = useContext(Context)
 
   useEffect(() => {
     setCurrentCard({})
@@ -34,7 +33,6 @@ export const Home = () => {
           <BigCard />
         </CardContainer>
       </Grid>
-      <BigCardModal isOpen={isModalOpen} />
     </Layout>
   )
 }
