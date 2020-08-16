@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { GiCancel } from 'react-icons/gi'
 
 export const Container = styled.div`
   position: fixed;
@@ -18,5 +19,25 @@ export const Content = styled.div`
   background: var(--element);
   position: relative;
   padding: 1rem;
-  width: 90%;
+  width: 80%;
+`
+
+export const CancelButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--element);
+  box-shadow: var(--shadow);
+  border: none;
+  position: absolute;
+  top: -20px;
+  right: -15px;
+`
+
+export const CancelIcon = styled(GiCancel)`
+  color: #d81b60;
+  font-size: 28px;
 `

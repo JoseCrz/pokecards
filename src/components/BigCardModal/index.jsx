@@ -4,15 +4,20 @@ import { Context } from '../../Context'
 
 import { BigCard } from '../BigCard'
 
-import { Container, Content } from './styles'
+import { Container, Content, CancelButton, CancelIcon } from './styles'
 
 export const BigCardModal = ({ isOpen }) => {
   const { setIsModalOpen } = useContext(Context)
   if (!isOpen) return null
 
+  const handleOnClick = () => setIsModalOpen(false)
+
   return ReactDOM.createPortal(
-    <Container onClick={() => setIsModalOpen(false)}>
+    <Container>
       <Content>
+        <CancelButton onClick={handleOnClick}>
+          <CancelIcon />
+        </CancelButton>
         <BigCard />
       </Content>
     </Container>
