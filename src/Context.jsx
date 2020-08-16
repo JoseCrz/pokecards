@@ -13,6 +13,7 @@ const Provider = ({ children }) => {
   const [cardsLoading, setCardsLoading] = useState(true)
   const [favs, setFavs] = useState(() => JSON.parse(window.localStorage.getItem('favs')) || [])
   const [isFav, setIsFav] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const value = {
     bigPictureLoaded,
@@ -29,6 +30,8 @@ const Provider = ({ children }) => {
     setCurrentSet,
     isSetLoading,
     setIsSetLoading,
+    isModalOpen,
+    setIsModalOpen,
     isFav,
     setIsFav,
     favs,

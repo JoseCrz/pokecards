@@ -9,17 +9,20 @@ import { Container, Img, Figure } from './styles'
 
 export const Card = ({ card }) => {
   const [loading, setLoading] = useState(true)
-  const { currentCard, setCurrentCard, setBigPictureLoaded, addFav, deleteFav, isFav } = useContext(Context)
+  const { currentCard, setCurrentCard, setBigPictureLoaded, addFav, deleteFav, isFav, setIsModalOpen } = useContext(Context)
+
   const [show, element] = useNearScreen()
 
   const handleOnClick = () => {
     if (currentCard === null) {
       setBigPictureLoaded(false)
       setCurrentCard(card)
+      setIsModalOpen(true)
     } else {
       if (currentCard.id !== card.id) {
         setBigPictureLoaded(false)
         setCurrentCard(card)
+        setIsModalOpen(true)
       }
     }
   }
