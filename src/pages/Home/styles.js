@@ -11,6 +11,7 @@ export const Grid = styled.div`
 
   ${phone} {
     grid-template-columns: 1fr;
+    grid-template-rows: 115px 1fr;
     grid-template-areas: 'search'
                          'cards';
   }

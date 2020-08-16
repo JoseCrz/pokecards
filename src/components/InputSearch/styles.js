@@ -1,10 +1,15 @@
 import styled from 'styled-components'
+import { phone } from '../../styles/MediaQueries'
 
 import { AiOutlineSearch } from 'react-icons/ai'
 
 export const Container = styled.div`
   display: flex;
   width: 100%;
+
+  ${phone} {
+    width: 90%;
+  }
 `
 
 export const Input = styled.input`

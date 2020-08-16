@@ -16,4 +16,7 @@ export const H2 = styled.h2`
 export const Arranger = styled.div`
   display: flex;
   align-items: center;
+  ${phone} {
+    justify-content: center;
+  }
 `
