@@ -19,12 +19,12 @@ export const Button = styled.button`
 
 export const Label = styled.div`
   ${phone} {
-    font-size: 14px;
+    font-size: 12px;
   }
 `
 
 export const Item = styled.div`
   ${phone} {
-    font-size: 14px;
+    font-size: 12px;
   }
 `
