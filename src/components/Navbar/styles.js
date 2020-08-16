@@ -17,10 +17,10 @@ export const Nav = styled.nav`
 
 export const Ul = styled.ul`
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 8fr;
+  justify-items: center;
   padding: 20px 0;
 
   ${phone} {
@@ -31,8 +31,7 @@ export const Ul = styled.ul`
 `
 
 export const Li = styled.li`
-  margin: 10px 0;
-  padding-right: 15px;
+  align-self: ${({ last }) => last ? 'end' : 'center'};
   
   ${phone} {
     display: flex;

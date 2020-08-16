@@ -21,30 +21,28 @@ export const Navbar = () => {
     <IconContext.Provider value={{ color: 'var(--icon)', size: '36px' }}>
       <Nav>
         <Ul>
-          <Div>
-            <Li>
-              <Link to='/' onClick={() => setSearchString('')}>
-                {
-                  window.location.pathname === '/' ? <IconHomeFull /> : <IconHome />
-                }
-              </Link>
-            </Li>
-            <Li>
-              <Link to='/sets'>
-                {
-                  window.location.pathname.includes('/sets') ? <IconSetsFull /> : <IconSets />
-                }
-              </Link>
-            </Li>
-            <Li>
-              <Link to='/favs' onClick={() => setCurrentCard({})}>
-                {
-                  window.location.pathname.includes('/favs') ? <IconFavsFull /> : <IconFavs />
-                }
-              </Link>
-            </Li>
-          </Div>
           <Li>
+            <Link to='/' onClick={() => setSearchString('')}>
+              {
+                window.location.pathname === '/' ? <IconHomeFull /> : <IconHome />
+              }
+            </Link>
+          </Li>
+          <Li>
+            <Link to='/sets'>
+              {
+                window.location.pathname.includes('/sets') ? <IconSetsFull /> : <IconSets />
+              }
+            </Link>
+          </Li>
+          <Li>
+            <Link to='/favs' onClick={() => setCurrentCard({})}>
+              {
+                window.location.pathname.includes('/favs') ? <IconFavsFull /> : <IconFavs />
+              }
+            </Link>
+          </Li>
+          <Li last>
             <Link to='/settings'>
               {
                 window.location.pathname.includes('/settings') ? <IconSettingsFull /> : <IconSettings />
