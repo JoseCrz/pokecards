@@ -69,7 +69,8 @@ const Provider = ({ children }) => {
       } catch (error) {
         console.log(error)
       }
-    }
+    },
+    activateModal: () => setIsModalOpen(true)
   }
 
   return (

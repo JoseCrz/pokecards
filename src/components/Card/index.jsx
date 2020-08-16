@@ -9,7 +9,7 @@ import { Container, Img, Figure } from './styles'
 
 export const Card = ({ card }) => {
   const [loading, setLoading] = useState(true)
-  const { currentCard, setCurrentCard, setBigPictureLoaded, addFav, deleteFav, isFav, setIsModalOpen } = useContext(Context)
+  const { currentCard, setCurrentCard, setBigPictureLoaded, addFav, deleteFav, isFav, activateModal } = useContext(Context)
 
   const [show, element] = useNearScreen()
 
@@ -17,14 +17,14 @@ export const Card = ({ card }) => {
     if (currentCard === null) {
       setBigPictureLoaded(false)
       setCurrentCard(card)
-      setIsModalOpen(true)
     } else {
       if (currentCard.id !== card.id) {
         setBigPictureLoaded(false)
         setCurrentCard(card)
-        setIsModalOpen(true)
       }
     }
+
+    activateModal()
   }
 
   const handleFav = () => isFav ? deleteFav({ card }) : addFav({ card })
