@@ -9,7 +9,7 @@ import { Container, Img, Figure } from './styles'
 
 export const Card = ({ card }) => {
   const [loading, setLoading] = useState(true)
-  const { currentCard, setCurrentCard, setBigPictureLoaded, addFav, deleteFav, isFav, activateModal } = useContext(Context)
+  const { currentCard, setCurrentCard, setBigPictureLoaded, toggleFav, isFav, activateModal } = useContext(Context)
 
   const [show, element] = useNearScreen()
 
@@ -27,14 +27,14 @@ export const Card = ({ card }) => {
     activateModal()
   }
 
-  const handleFav = () => isFav ? deleteFav({ card }) : addFav({ card })
+  const handleFav = () => toggleFav({ card })
 
   return (
     <Container ref={element}>
       {
         show &&
           <>
-            <FavButton onClick={handleFav} isFav={isFav} cardId={card.id} />
+            <FavButton onClick={handleFav} cardId={card.id} />
             <Figure onClick={handleOnClick}>
               <Img loading={loading} src={card.imageUrl} onLoad={() => setLoading(false)} alt='' />
             </Figure>

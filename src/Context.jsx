@@ -15,6 +15,22 @@ const Provider = ({ children }) => {
   const [isFav, setIsFav] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
+  const addFav = ({ card }) => {
+    const ids = favs.map(fav => fav.id)
+
+    if (!ids.includes(card.id)) {
+      const newFavs = [...favs, card]
+      window.localStorage.setItem('favs', JSON.stringify(newFavs))
+      setFavs(newFavs)
+    }
+  }
+
+  const deleteFav = ({ card }) => {
+    const newFavs = favs.filter(fav => fav.id !== card.id)
+    window.localStorage.setItem('favs', JSON.stringify(newFavs))
+    setFavs(newFavs)
+  }
+
   const value = {
     bigPictureLoaded,
     setBigPictureLoaded,
@@ -34,19 +50,8 @@ const Provider = ({ children }) => {
     isFav,
     setIsFav,
     favs,
-    addFav: ({ card }) => {
-      const ids = favs.map(fav => fav.id)
-
-      if (!ids.includes(card.id)) {
-        const newFavs = [...favs, card]
-        window.localStorage.setItem('favs', JSON.stringify(newFavs))
-        setFavs(newFavs)
-      }
-    },
-    deleteFav: ({ card }) => {
-      const newFavs = favs.filter(fav => fav.id !== card.id)
-      window.localStorage.setItem('favs', JSON.stringify(newFavs))
-      setFavs(newFavs)
+    toggleFav: ({ card }) => {
+      favs.map(fav => fav.id).includes(card.id) ? deleteFav({ card }) : addFav({ card })
     },
     fetchCards: async (enforcedString, searchType = 'name') => {
       setCardsLoading(true)
