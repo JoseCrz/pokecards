@@ -4,22 +4,25 @@ import { TiDeleteOutline } from 'react-icons/ti'
 import { phone } from '../../styles/MediaQueries'
 
 export const Button = styled.button`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--element);
   box-shadow: var(--shadow);
   width: 30px;
   height: 30px;
+  font-size: 24px;
+  padding:0;
+  opacity: 0;
   border-radius: 50%;
   border: none;
-  position: absolute;
   top: 5px;
   right: 5px;
-  opacity: 0;
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
   outline:none;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  z-index: 99;
+ 
   
   &:hover {
     box-shadow: var(--shadow--big);
@@ -33,14 +36,11 @@ export const Button = styled.button`
 
 export const IconFavs = styled(AiOutlineStar)`
   color: #fdd835;
-  font-size: 48px;
 `
 export const IconFavsFull = styled(AiFillStar)`
   color: #fdd835;
-  font-size: 48px;
 `
 
 export const DeleteFav = styled(TiDeleteOutline)`
   color: #d81b60;
-  font-size: 48px;
 `
