@@ -16,8 +16,8 @@ export const Details = styled.div`
 `
 
 export const Container = styled.div`
-  width: 180px;
-  height: 251px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   border-radius: var(--border);
   background: var(--element);

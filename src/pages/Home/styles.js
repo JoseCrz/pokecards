@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { phone } from '../../styles/MediaQueries'
 
 export const Grid = styled.div`
   display: grid;
@@ -7,6 +8,12 @@ export const Grid = styled.div`
   grid-template-areas: 'cards search'
                        'cards card';
   overflow: scroll;
+
+  ${phone} {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'search'
+                         'cards';
+  }
 `
 
 export const SearchContainer = styled.div`
@@ -24,4 +31,8 @@ export const CardContainer = styled.div`
   width: 100%;
   display: grid;
   align-items: center;
+
+  ${phone} {
+    display: none;
+  }
 `
