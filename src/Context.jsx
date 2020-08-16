@@ -31,7 +31,6 @@ const Provider = ({ children }) => {
     isSetLoading,
     setIsSetLoading,
     isModalOpen,
-    setIsModalOpen,
     isFav,
     setIsFav,
     favs,
@@ -70,7 +69,8 @@ const Provider = ({ children }) => {
         console.log(error)
       }
     },
-    activateModal: () => setIsModalOpen(true)
+    activateModal: () => setIsModalOpen(true),
+    deactivateModal: () => setIsModalOpen(false)
   }
 
   return (

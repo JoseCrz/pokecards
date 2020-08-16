@@ -7,10 +7,11 @@ import { BigCard } from '../BigCard'
 import { Container, Content, CancelButton, CancelIcon } from './styles'
 
 export const BigCardModal = ({ isOpen }) => {
-  const { setIsModalOpen } = useContext(Context)
+  const { deactivateModal } = useContext(Context)
+
   if (!isOpen) return null
 
-  const handleOnClick = () => setIsModalOpen(false)
+  const handleOnClick = () => deactivateModal()
 
   return ReactDOM.createPortal(
     <Container>
