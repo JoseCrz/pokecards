@@ -24,8 +24,8 @@ export const Ul = styled.ul`
   padding: 20px 0;
 
   ${phone} {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
     padding: 0 20px 0 0;
   }
 `
@@ -34,23 +34,8 @@ export const Li = styled.li`
   align-self: ${({ last }) => last ? 'end' : 'center'};
   
   ${phone} {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    align-self: center;
     margin: 0;
-    padding-right: 0;
-  }
-`
-
-export const Div = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  ${phone} {
-    flex-direction: initial;
-    justify-content: space-evenly;
-    align-items: center;
+    padding: 0;
   }
 `

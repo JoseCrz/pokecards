@@ -13,7 +13,7 @@ import {
 import { BsCollection as IconSets, BsFillCollectionFill as IconSetsFull } from 'react-icons/bs'
 import { Context } from '../../Context'
 
-import { Nav, Ul, Li, Div } from './styles'
+import { Nav, Ul, Li } from './styles'
 export const Navbar = () => {
   const { setSearchString, setCurrentCard } = useContext(Context)
 
