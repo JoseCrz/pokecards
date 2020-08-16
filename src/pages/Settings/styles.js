@@ -7,8 +7,11 @@ export const H1 = styled.h1`
 
 export const Container = styled.div`
   max-height: 100%;
-  width: 100vw;
   overflow: scroll;
+  
+  ${phone} {
+    width: 100vw;
+  }
 `
 
 export const PaletteListContainer = styled.div`
