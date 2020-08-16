@@ -69,7 +69,7 @@ const Provider = ({ children }) => {
         console.log(error)
       }
     },
-    activateModal: () => setIsModalOpen(true),
+    activateModal: () => window.screen.width <= 414 && setIsModalOpen(true),
     deactivateModal: () => setIsModalOpen(false)
   }
 
