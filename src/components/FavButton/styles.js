@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { AiOutlineStar, AiFillStar } from 'react-icons/ai'
-import { TiDeleteOutline } from 'react-icons/ti'
+import { AiOutlineStar, AiFillStar, AiFillDelete, AiOutlineDelete } from 'react-icons/ai'
 import { phone } from '../../styles/MediaQueries'
 
 export const Button = styled.button`
@@ -41,6 +40,6 @@ export const IconFavsFull = styled(AiFillStar)`
   color: #fdd835;
 `
 
-export const DeleteFav = styled(TiDeleteOutline)`
+export const DeleteFav = styled(AiOutlineDelete)`
   color: #d81b60;
 `
