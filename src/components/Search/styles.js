@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { phone } from '../../styles/MediaQueries'
 
 export const Container = styled.div`
   z-index: 100;
@@ -6,10 +7,10 @@ export const Container = styled.div`
 
 export const H2 = styled.h2`
   margin: 20px 0;
-`
-
-export const RadioContainer = styled.div`
-
+  ${phone} {
+    font-size: 18px;
+    text-align: center;
+  }
 `
 
 export const Arranger = styled.div`
