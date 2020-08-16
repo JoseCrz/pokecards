@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { phone } from '../../styles/MediaQueries'
 
 export const Container = styled.div`
   position: absolute;
@@ -9,6 +10,11 @@ export const Container = styled.div`
   border-radius: var(--border);
   box-shadow: var(--shadow);
   transition: cubic-bezier(0.215, 0.610, 0.355, 1) .2s;
+
+  ${phone} {
+    height: 15%;
+    bottom: ${({ isMinimized }) => isMinimized ? '-15%' : '0'};
+  }
   
 `
 
