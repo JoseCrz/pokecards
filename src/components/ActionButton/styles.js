@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { phone } from '../../styles/MediaQueries'
 
 export const Button = styled.button`
   display: flex;
@@ -17,9 +18,13 @@ export const Button = styled.button`
 `
 
 export const Label = styled.div`
-
+  ${phone} {
+    font-size: 14px;
+  }
 `
 
 export const Item = styled.div`
-
+  ${phone} {
+    font-size: 14px;
+  }
 `
