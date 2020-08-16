@@ -29,6 +29,7 @@ export const CancelButton = styled.button`
   align-items: center;
   width: 40px;
   height: 40px;
+  padding: 0;
   border-radius: 50%;
   background: var(--element);
   box-shadow: var(--shadow);
@@ -36,9 +37,9 @@ export const CancelButton = styled.button`
   position: absolute;
   top: -20px;
   right: -15px;
+  font-size: 32px;
 `
 
 export const CancelIcon = styled(GiCancel)`
   color: #d81b60;
-  font-size: 28px;
 `
