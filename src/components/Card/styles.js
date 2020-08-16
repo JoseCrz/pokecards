@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { fadeIn } from '../../styles/Animations'
+import { phone } from '../../styles/MediaQueries'
 
 export const Details = styled.div`
   position: absolute;
@@ -34,6 +35,18 @@ export const Container = styled.div`
 
   &:hover button {
     opacity: 1;
+  }
+
+  ${phone} {
+    &:hover {
+      box-shadow: var(--shadow);
+      transform: scale(1);
+      z-index: 0;
+    }
+
+    &:hover {
+      opacity: 0;
+    }
   }
 `
 
