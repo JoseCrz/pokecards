@@ -43,10 +43,6 @@ export const Container = styled.div`
       transform: scale(1);
       z-index: 0;
     }
-
-    &:hover button {
-      opacity: 0;
-    }
   }
 `
 

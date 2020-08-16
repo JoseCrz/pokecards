@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { AiOutlineStar, AiFillStar } from 'react-icons/ai'
 import { TiDeleteOutline } from 'react-icons/ti'
+import { phone } from '../../styles/MediaQueries'
 
 export const Button = styled.button`
   background: var(--element);
@@ -17,12 +18,16 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 99;
   outline:none;
   
   &:hover {
     box-shadow: var(--shadow--big);
     transform: scale(1.1);
+  }
+
+  ${phone} {
+    opacity: 1;
   }
 `
 
