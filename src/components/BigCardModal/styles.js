@@ -7,7 +7,7 @@ export const Container = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,9 +18,9 @@ export const Container = styled.div`
 export const Content = styled.div`
   border-radius: var(--border);
   background: var(--element);
+  box-shadow: var(--shadow--big);
   position: relative;
-  padding: 1rem;
-  width: 80%;
+  width: 85%;
 `
 
 export const CancelButton = styled.button`
@@ -35,8 +35,8 @@ export const CancelButton = styled.button`
   box-shadow: var(--shadow);
   border: none;
   position: absolute;
-  top: -20px;
-  right: -15px;
+  top: -45px;
+  right: -20px;
   font-size: 32px;
 `
 
