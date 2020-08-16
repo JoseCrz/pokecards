@@ -14,7 +14,6 @@ export const BigCardOptions = ({ children }) => {
         }
         <Button onClick={() => setIsMinimized(!isMinimized)} isMinimized={isMinimized}>
           {
-            // isMinimized ? '+' : '-'
             isMinimized ? <MoreIcon /> : <LessIcon />
           }
         </Button>
