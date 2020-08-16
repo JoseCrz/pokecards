@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { AiOutlineStar, AiFillStar, AiFillDelete, AiOutlineDelete } from 'react-icons/ai'
+import { AiOutlineStar, AiFillStar, AiOutlineDelete } from 'react-icons/ai'
 import { phone } from '../../styles/MediaQueries'
 
 export const Button = styled.button`
