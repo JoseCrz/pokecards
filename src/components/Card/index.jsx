@@ -9,7 +9,7 @@ import { Container, Img, Figure } from './styles'
 
 export const Card = ({ card }) => {
   const [loading, setLoading] = useState(true)
-  const { currentCard, setCurrentCard, setBigPictureLoaded, toggleFav, isFav, activateModal } = useContext(Context)
+  const { currentCard, setCurrentCard, setBigPictureLoaded, toggleFav, activateModal } = useContext(Context)
 
   const [show, element] = useNearScreen()
 
