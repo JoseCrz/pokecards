@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from '@reach/router'
+import { phone } from '../../styles/MediaQueries'
 
 export const StyledLink = styled(Link)`
   background: transparent;
@@ -16,4 +17,7 @@ export const StyledLink = styled(Link)`
     color: var(--text-white);
   }
   
+  ${phone} {
+    font-size: 12px;
+  }
 `
