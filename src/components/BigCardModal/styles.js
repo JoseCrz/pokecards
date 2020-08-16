@@ -41,5 +41,5 @@ export const CancelButton = styled.button`
 `
 
 export const CancelIcon = styled(GiCancel)`
-  color: #d81b60;
+ color: #e57373;
 `
