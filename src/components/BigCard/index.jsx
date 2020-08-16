@@ -8,7 +8,7 @@ import { BigCardOptions } from '../BigCardOptions'
 import { Card, ThumbImg, LoadedImage, H2, Top, Placeholder } from './styles'
 
 export const BigCard = ({ showOptions = true }) => {
-  const { currentCard, bigPictureLoaded, setBigPictureLoaded, fetchCards } = useContext(Context)
+  const { currentCard, bigPictureLoaded, setBigPictureLoaded, fetchCards, deactivateModal } = useContext(Context)
   const { imageUrl, imageUrlHiRes, evolvesFrom, set, setCode } = currentCard
 
   const cardExists = Object.keys(currentCard).length > 0
@@ -38,7 +38,7 @@ export const BigCard = ({ showOptions = true }) => {
                     cardExists && (
                       <>
                         {evolvesFrom && <ActionButton onClick={handleOnClick} label='Evolves from' item={evolvesFrom} />}
-                        <LinkStyled to={`/sets/${setCode}`}>{`Set: ${set}`}</LinkStyled>
+                        <LinkStyled to={`/sets/${setCode}`} onClick={() => deactivateModal()}>{`Set: ${set}`}</LinkStyled>
                       </>
                     )
                   }
