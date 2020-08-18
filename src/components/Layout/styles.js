@@ -8,7 +8,9 @@ export const Arranger = styled.div`
 
   ${phone} {
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh;
+    grid-template-rows: calc(calc(var(--vh, 1vh)* 100 ) - 60px) 60px;
+    grid-template-areas: 'main'
+                         'navbar';
   }
 `
 
@@ -19,5 +21,6 @@ export const Main = styled.main`
 
   ${phone} {
     padding: 0;
+    grid-area: main;
   }
 `

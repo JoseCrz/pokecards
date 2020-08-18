@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Router } from '@reach/router'
 
 import { Home } from './pages/Home'
@@ -10,6 +10,16 @@ import { Settings } from './pages/Settings'
 import { GlobalStyle } from './styles/GlobalStyle'
 
 export const App = () => {
+  // * THIS HOLY CODE IS TO FIX THE MOBILE NAVBAR 100VH BUG
+  useEffect(() => {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+
+    window.addEventListener('resize', () => {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    })
+  }, [])
   return (
     <>
       <GlobalStyle />
