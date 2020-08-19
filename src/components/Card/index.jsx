@@ -9,7 +9,7 @@ import { useNearScreen } from '../../hooks/useNearScreen'
 import { Container, Img, Figure } from './styles'
 
 export const Card = ({ card }) => {
-  const [loading, setLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
   const { currentCard, setCurrentCard, setBigPictureLoaded, toggleFav, activateModal } = useContext(Context)
 
   const [show, element] = useNearScreen()
@@ -37,7 +37,7 @@ export const Card = ({ card }) => {
           <>
             <FavButton onClick={handleFav} cardId={card.id} />
             <Figure onClick={handleOnClick}>
-              <Img loading={loading} src={card.imageUrl} onLoad={() => setLoading(false)} alt='' />
+              <Img isloading={isLoading} src={card.imageUrl} onLoad={() => setIsLoading(false)} alt='' />
             </Figure>
           </>
       }

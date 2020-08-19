@@ -58,5 +58,5 @@ export const Img = styled.img`
   width: 100%;
   height: 100%;
   transition: opacity 400ms ease 0ms;
-  opacity: ${props => props.loading ? 0 : 1};
+  opacity: ${({ isloading }) => isloading ? 0 : 1};
 `
