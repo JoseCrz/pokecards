@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 import { Context } from '../../Context'
@@ -8,7 +9,7 @@ import { BigCardModal } from '../BigCardModal'
 
 import { Arranger, Main } from './styles'
 
-export const Layout = ({ children, title, header }) => {
+export const Layout = ({ children, title }) => {
   const { isModalOpen } = useContext(Context)
 
   return (
@@ -28,4 +29,8 @@ export const Layout = ({ children, title, header }) => {
       <BigCardModal isOpen={isModalOpen} />
     </>
   )
+}
+
+Layout.propTypes = {
+  title: PropTypes.string.isRequired
 }
