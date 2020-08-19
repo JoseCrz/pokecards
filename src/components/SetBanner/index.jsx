@@ -15,3 +15,16 @@ export const SetBanner = ({ logoUrl, series, totalCards, releaseDate }) => {
     </Banner>
   )
 }
+
+SetBanner.defaultProps = {
+  logoUrl: '',
+  series: '',
+  totalCards: 0,
+  releaseDate: ''
+}
+SetBanner.propTypes = {
+  logoUrl: PropTypes.string.isRequired,
+  series: PropTypes.string.isRequired,
+  totalCards: PropTypes.number.isRequired,
+  releaseDate: PropTypes.string.isRequired
+}
