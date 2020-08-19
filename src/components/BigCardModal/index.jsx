@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 import { Context } from '../../Context'
 
 import { BigCard } from '../BigCard'
@@ -23,4 +24,8 @@ export const BigCardModal = ({ isOpen }) => {
       </Content>
     </Container>
     , document.querySelector('#modal'))
+}
+
+BigCardModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired
 }
