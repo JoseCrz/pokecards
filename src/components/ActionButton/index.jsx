@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { Button, Label, Item } from './styles'
 
@@ -13,4 +14,10 @@ export const ActionButton = ({ label, item, onClick }) => {
       </Item>
     </Button>
   )
+}
+
+ActionButton.propTypes = {
+  label: PropTypes.string.isRequired,
+  item: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
 }
