@@ -21,6 +21,6 @@ export const CardSet = ({ set }) => {
   )
 }
 
-Set.propTypes = {
+CardSet.propTypes = {
   set: PropTypes.object.isRequired
 }
