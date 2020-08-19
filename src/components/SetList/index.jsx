@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { Set } from '../Set'
+import { CardSet } from '../CardSet'
 
 import { Container } from './styles'
 export const SetList = ({ sets = [] }) => {
   return (
     <Container>
       {
-        sets.map(set => <Set key={set.code} set={set} />)
+        sets.map(set => <CardSet key={set.code} set={set} />)
       }
     </Container>
   )

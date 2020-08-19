@@ -6,7 +6,7 @@ import { useNearScreen } from '../../hooks/useNearScreen'
 
 import { Container, Img } from './styles'
 
-export const Set = ({ set }) => {
+export const CardSet = ({ set }) => {
   const { code, logoUrl } = set
   const [show, element] = useNearScreen()
 

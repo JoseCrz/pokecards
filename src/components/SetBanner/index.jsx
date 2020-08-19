@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { Banner, TextContainer, Img, P } from './styles'
 
