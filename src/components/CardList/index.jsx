@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { Card } from '../Card'
 
@@ -11,4 +12,8 @@ export const CardList = ({ cards = [] }) => {
       }
     </Container>
   )
+}
+
+CardList.propTypes = {
+  cards: PropTypes.array.isRequired
 }
