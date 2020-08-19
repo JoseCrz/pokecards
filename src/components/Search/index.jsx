@@ -8,11 +8,12 @@ import { Container, H2, Arranger } from './styles'
 export const Search = () => {
   const { searchString, setSearchString, fetchCards } = useContext(Context)
 
-  const handleOnClick = async () => fetchCards()
-
   const handleOnChange = ({ target }) => setSearchString(target.value.trim())
 
-  const handleOnKeyPress = ({ charCode }) => charCode === 13 && fetchCards()
+  const handleOnSubmit = event => {
+    event.preventDefault()
+    fetchCards()
+  }
 
   return (
     <Container>
@@ -20,9 +21,8 @@ export const Search = () => {
       <Arranger>
         <InputSearch
           value={searchString}
-          onClick={handleOnClick}
+          onSubmit={handleOnSubmit}
           onChange={handleOnChange}
-          onKeyPress={handleOnKeyPress}
           placeholder='Name of card'
         />
       </Arranger>

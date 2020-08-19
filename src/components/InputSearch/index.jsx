@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container, Input, Button, Icon } from './styles'
 
-export const InputSearch = ({ value, onClick, onChange, onKeyPress, placeholder }) => {
+export const InputSearch = ({ value, onSubmit, onChange, placeholder }) => {
   return (
-    <Container>
-      <Input value={value} onChange={onChange} onKeyPress={onKeyPress} placeholder={placeholder} />
-      <Button onClick={onClick}>
+    <Container onSubmit={onSubmit}>
+      <Input value={value} onChange={onChange} placeholder={placeholder} />
+      <Button>
         <Icon />
       </Button>
     </Container>

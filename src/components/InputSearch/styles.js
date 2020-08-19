@@ -3,7 +3,7 @@ import { phone } from '../../styles/MediaQueries'
 
 import { AiOutlineSearch } from 'react-icons/ai'
 
-export const Container = styled.div`
+export const Container = styled.form`
   display: flex;
   width: 100%;
 
