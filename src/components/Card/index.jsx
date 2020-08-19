@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import PropTypes from 'prop-types'
 import { Context } from '../../Context'
 
 import { FavButton } from '../FavButton'
@@ -42,4 +43,8 @@ export const Card = ({ card }) => {
       }
     </Container>
   )
+}
+
+Card.propTypes = {
+  card: PropTypes.object.isRequired
 }
