@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Container, Input, Button, Icon } from './styles'
 
 export const InputSearch = ({ value, onSubmit, onChange, placeholder }) => {
@@ -10,4 +11,11 @@ export const InputSearch = ({ value, onSubmit, onChange, placeholder }) => {
       </Button>
     </Container>
   )
+}
+
+InputSearch.propTypes = {
+  value: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired
 }
