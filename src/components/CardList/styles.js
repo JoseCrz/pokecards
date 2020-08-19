@@ -10,7 +10,9 @@ export const Container = styled.div`
   justify-content: center;
 
   ${phone} {
-    grid-template-columns: repeat(auto-fit, 145px);
-    grid-auto-rows: 202px;
+    grid-template-columns: repeat(auto-fit, 160px);
+    grid-auto-rows: 222px;
+    gap: 15px;
+    padding: 10px 0px;
   }
 `
