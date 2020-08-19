@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 import { Context } from '../../Context'
 import { Button, IconFavs, IconFavsFull } from './styles'
 
@@ -12,4 +13,9 @@ export const FavButton = ({ onClick, cardId }) => {
       }
     </Button>
   )
+}
+
+FavButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  cardId: PropTypes.string.isRequired
 }
