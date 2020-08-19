@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 import { Context } from '../../Context'
 
 import { ActionButton } from '../ActionButton'
@@ -55,4 +56,8 @@ export const BigCard = ({ showOptions = true }) => {
     </>
 
   )
+}
+
+BigCard.propTypes = {
+  showOptions: PropTypes.bool
 }
