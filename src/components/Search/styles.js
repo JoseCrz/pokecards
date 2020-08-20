@@ -7,8 +7,9 @@ export const Container = styled.div`
 
 export const H2 = styled.h2`
   margin: 20px 0;
+  
   ${phone} {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
   }
 `
