@@ -5,6 +5,7 @@ import { Search } from '../../components/Search'
 import { CardList } from '../../components/CardList'
 import { BigCard } from '../../components/BigCard'
 import { Loader } from '../../components/Loader'
+import { GitHubCorner } from '../../components/GitHubCorner'
 
 import { Grid, SearchContainer, CardContainer, CardsContainer } from './styles'
 
@@ -20,6 +21,7 @@ export const Home = () => {
 
   return (
     <Layout title='Home'>
+      <GitHubCorner />
       <Grid>
         <SearchContainer>
           <Search />
