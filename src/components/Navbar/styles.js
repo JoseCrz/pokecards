@@ -6,12 +6,6 @@ export const Nav = styled.nav`
   color: var(--text-white);
 
   ${phone} {
-    /* position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    height: 60px; */
     grid-area: navbar;
   }
 `
