@@ -9,6 +9,7 @@ export const H2 = styled.h2`
   margin: 20px 0;
   
   ${phone} {
+    margin: 10px 0;
     font-size: 16px;
     text-align: center;
   }
@@ -19,5 +20,6 @@ export const Arranger = styled.div`
   align-items: center;
   ${phone} {
     justify-content: center;
+    padding-bottom: 8px;
   }
 `

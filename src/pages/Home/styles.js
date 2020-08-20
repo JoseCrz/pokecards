@@ -19,6 +19,12 @@ export const Grid = styled.div`
 
 export const SearchContainer = styled.div`
   grid-area: search;
+
+  ${phone} {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 `
 
 export const CardsContainer = styled.div`
