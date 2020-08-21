@@ -13,7 +13,9 @@ Pokécards is a Web App that allows you to discover and search for your favorite
 * Change app theme.
 
 ## Screenshots
-
+![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-1.png)
+![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-3.png)
+![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-2.png)
 
 ## Installation
 
