@@ -11,5 +11,17 @@
   <noscript>
     <h3>This App needs JavaScript to work. 😵</h3>
   </noscript>
+  <script>
+    if ('serviceWorker' in navigator ) {
+      window.addEventListener('load', async () => {
+        try {
+          await navigator.serviceWorker.register('/service-worker.js')
+          console.log('Service Worker registered')
+        } catch (error) {
+          console.error('Service Worker Error', error)
+        }
+      })
+    }
+  </script>
 </body>
 </html>
