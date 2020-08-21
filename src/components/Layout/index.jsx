@@ -15,7 +15,7 @@ export const Layout = ({ children, title }) => {
   return (
     <>
       <Helmet>
-        <title>Pokémon | {title}</title>
+        <title>Pokécads | {title}</title>
         <link href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap' rel='stylesheet' />
       </Helmet>
       <Arranger>
