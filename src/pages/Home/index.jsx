@@ -9,7 +9,7 @@ import { GitHubCorner } from '../../components/GitHubCorner'
 
 import { Grid, SearchContainer, CardContainer, CardsContainer } from './styles'
 
-export const Home = () => {
+const Home = () => {
   const { cards, cardsLoading, setCurrentCard, fetchCards, setIsFav } = useContext(Context)
 
   useEffect(() => {
@@ -38,3 +38,5 @@ export const Home = () => {
     </Layout>
   )
 }
+
+export default Home

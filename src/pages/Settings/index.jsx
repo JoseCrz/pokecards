@@ -6,7 +6,7 @@ import { GitHubCorner } from '../../components/GitHubCorner'
 
 import { H1, PaletteListContainer, Container } from './styles'
 
-export const Settings = () => {
+const Settings = () => {
   return (
     <Layout title='Settings'>
       <GitHubCorner />
@@ -19,3 +19,5 @@ export const Settings = () => {
     </Layout>
   )
 }
+
+export default Settings

@@ -8,7 +8,7 @@ import { useFetchSets } from '../../hooks/useFetchSets'
 
 import { SetListContainer } from './styles'
 
-export const Sets = () => {
+const Sets = () => {
   const { loading, sets } = useFetchSets()
 
   return (
@@ -21,3 +21,5 @@ export const Sets = () => {
     </Layout>
   )
 }
+
+export default Sets

@@ -8,7 +8,7 @@ import { BigCard } from '../../components/BigCard'
 
 import { Grid, BannerContainer, CardListContainer, BigCardContainer } from './styles'
 
-export const Favorites = () => {
+const Favorites = () => {
   const { favs, setIsFav } = useContext(Context)
   useEffect(() => setIsFav(true), [])
 
@@ -30,3 +30,5 @@ export const Favorites = () => {
     </Layout>
   )
 }
+
+export default Favorites

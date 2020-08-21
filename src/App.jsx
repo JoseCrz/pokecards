@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Router } from '@reach/router'
 
-import { Home } from './pages/Home'
-import { Sets } from './pages/Sets'
-import { SetDetail } from './pages/SetDetail'
-import { Favorites } from './pages/Favorites'
-import { Settings } from './pages/Settings'
-
 import { GlobalStyle } from './styles/GlobalStyle'
-
 import { useFixNavbarBug } from './hooks/useFixNavbarBug'
+import { Loader } from './components/Loader'
+
+const Home = lazy(() => import('./pages/Home'))
+const Sets = lazy(() => import('./pages/Sets'))
+const SetDetail = lazy(() => import('./pages/SetDetail'))
+const Favorites = lazy(() => import('./pages/Favorites'))
+const Settings = lazy(() => import('./pages/Settings'))
 
 export const App = () => {
   useFixNavbarBug()
 
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <GlobalStyle />
       <Router>
         <Home path='/' />
@@ -24,6 +24,6 @@ export const App = () => {
         <Settings path='/settings' />
         <Favorites path='/favs' />
       </Router>
-    </>
+    </Suspense>
   )
 }
