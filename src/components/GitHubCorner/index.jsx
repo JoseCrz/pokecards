@@ -4,7 +4,7 @@ import { Svg, A, OctoArm, OctoBody, Background } from './styles'
 
 export const GitHubCorner = (props) => {
   return (
-    <A href='https://github.com/JoseCrz/pokemon-tcg' target='_blank'>
+    <A href='https://github.com/JoseCrz/pokemon-tcg' target='_blank' rel='noreferrer'>
       <Svg
         viewBox='0 0 250 250'
         {...props}
