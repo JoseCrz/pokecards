@@ -16,3 +16,7 @@ export const Container = styled.div`
     padding: 10px 0px;
   }
 `
+
+export const H3 = styled.h3`
+  text-align: center;
+`

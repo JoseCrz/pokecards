@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 
 import { Card } from '../Card'
 
-import { Container } from './styles'
+import { Container, H3 } from './styles'
 export const CardList = ({ cards = [] }) => {
   return (
     <Container>
       {
-        cards.map(card => <Card key={card.id} card={card} />)
+        cards.length > 0
+          ? cards.map(card => <Card key={card.id} card={card} />)
+          : <H3>We couldn't find that...</H3>
       }
     </Container>
   )
