@@ -5,20 +5,20 @@
 
 Pokécards is a Web App that allows you to discover and search for your favorite Pokémon TCG Cards. Powered by [Pokemon TGC API](https://pokemontcg.io)
 
-## Features:
+## 🧨 Features:
 
 * Search your favorite card by name.
 * Search through card sets.
 * Save your favorite cards.
 * Change app theme.
 
-## Technology:
+## 🛠 Technology:
 * React
 * Styled Components
 * Vercel
 * Webpack
 
-## Screenshots
+## 📸 Screenshots
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-1.png)
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-3.png)
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-2.png)
@@ -26,13 +26,13 @@ Pokécards is a Web App that allows you to discover and search for your favorite
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-6.png)
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-4.png)
 
-## Installation
+## ⚙️ Installation
 
 ```
 npm install
 ```
 
-## Run
+## 🏃🏻‍♂️ Run
 
 ### Development
 
@@ -46,6 +46,9 @@ npm run dev
 npm run build
 ```
 
-## Live Demo
+## 📱 Live Demo
 
 https://pokecards.vercel.app
+
+## 👨🏻‍💻 Hit me up!
+You're more than welcome to pull request any improvement or fix. You just want to talk? contact me on Twitter [@jose_crz](https://twitter.com/Jose_Crz) 😬
