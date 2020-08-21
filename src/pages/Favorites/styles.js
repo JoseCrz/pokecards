@@ -40,3 +40,7 @@ export const BigCardContainer = styled.div`
     display: none;
   }
 `
+
+export const H3 = styled.h3`
+  text-align: center;
+`

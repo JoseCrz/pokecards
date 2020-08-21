@@ -6,7 +6,7 @@ import { Layout } from '../../components/Layout'
 import { CardList } from '../../components/CardList'
 import { BigCard } from '../../components/BigCard'
 
-import { Grid, BannerContainer, CardListContainer, BigCardContainer } from './styles'
+import { Grid, BannerContainer, CardListContainer, BigCardContainer, H3 } from './styles'
 
 const Favorites = () => {
   const { favs, setIsFav } = useContext(Context)
@@ -20,7 +20,7 @@ const Favorites = () => {
         </BannerContainer>
         <CardListContainer>
           {
-            favs.length > 0 ? <CardList cards={favs} /> : <h2>Looks like you don't have favorites yet</h2>
+            favs.length > 0 ? <CardList cards={favs} /> : <H3>Looks like you don't have favorites yet...</H3>
           }
         </CardListContainer>
         <BigCardContainer>
