@@ -12,6 +12,12 @@ Pokécards is a Web App that allows you to discover and search for your favorite
 * Save your favorite cards.
 * Change app theme.
 
+## Technology:
+* React
+* Styled Components
+* Vercel
+* Webpack
+
 ## Screenshots
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-1.png)
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-3.png)
@@ -34,7 +40,7 @@ npm install
 npm run dev
 ```
 
-### Production
+### Build
 
 ```
 npm run build
