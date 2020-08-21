@@ -16,6 +16,9 @@ Pokécards is a Web App that allows you to discover and search for your favorite
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-1.png)
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-3.png)
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-2.png)
+![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-5.png)
+![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-6.png)
+![](https://jose-stuff.s3.us-east-2.amazonaws.com/Pokecards/pokecards-4.png)
 
 ## Installation
 
