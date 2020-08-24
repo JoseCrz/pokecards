@@ -11,6 +11,7 @@ Pokécards is a Web App that allows you to discover and search for your favorite
 * Search through card sets.
 * Save your favorite cards.
 * Change app theme.
+* PWA ready.
 
 ## 🛠 Technology:
 * React
