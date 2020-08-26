@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Context } from '../../Context'
 
 import { InputSearch } from '../InputSearch'
@@ -6,13 +6,14 @@ import { InputSearch } from '../InputSearch'
 import { Container, H2, Arranger } from './styles'
 
 export const Search = () => {
-  const { searchString, setSearchString, fetchCards } = useContext(Context)
+  const { fetchCards } = useContext(Context)
+  const [value, setValue] = useState('')
 
-  const handleOnChange = ({ target }) => setSearchString(target.value.trim())
+  const handleOnChange = ({ target }) => setValue(target.value.trim())
 
   const handleOnSubmit = event => {
     event.preventDefault()
-    fetchCards()
+    fetchCards(value)
   }
 
   return (
@@ -20,7 +21,7 @@ export const Search = () => {
       <H2>Find your favorite Pokémon TCG Card!</H2>
       <Arranger>
         <InputSearch
-          value={searchString}
+          value={value}
           onSubmit={handleOnSubmit}
           onChange={handleOnChange}
           placeholder='Name of card'
