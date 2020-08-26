@@ -5,7 +5,7 @@ import { InputSearch } from '../InputSearch'
 
 import { Container, H2, Arranger } from './styles'
 
-export const Search = () => {
+export const Search = React.memo(() => {
   const { fetchCards } = useContext(Context)
   const [keyword, setKeyword] = useState('')
 
@@ -29,4 +29,4 @@ export const Search = () => {
       </Arranger>
     </Container>
   )
-}
+})
