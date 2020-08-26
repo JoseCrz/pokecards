@@ -7,13 +7,13 @@ import { Container, H2, Arranger } from './styles'
 
 export const Search = () => {
   const { fetchCards } = useContext(Context)
-  const [value, setValue] = useState('')
+  const [keyword, setKeyword] = useState('')
 
-  const handleOnChange = ({ target }) => setValue(target.value.trim())
+  const handleOnChange = ({ target }) => setKeyword(target.value.trim())
 
   const handleOnSubmit = event => {
     event.preventDefault()
-    fetchCards(value)
+    fetchCards(keyword)
   }
 
   return (
@@ -21,7 +21,7 @@ export const Search = () => {
       <H2>Find your favorite Pokémon TCG Card!</H2>
       <Arranger>
         <InputSearch
-          value={value}
+          value={keyword}
           onSubmit={handleOnSubmit}
           onChange={handleOnChange}
           placeholder='Name of card'
