@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useCallback } from 'react'
 import { Context } from '../../Context'
 
 import { InputSearch } from '../InputSearch'
@@ -9,12 +9,12 @@ export const Search = () => {
   const { fetchCards } = useContext(Context)
   const [keyword, setKeyword] = useState('')
 
-  const handleOnChange = ({ target }) => setKeyword(target.value.trim())
+  const handleOnChange = useCallback(({ target }) => setKeyword(target.value.trim()), [setKeyword])
 
-  const handleOnSubmit = event => {
+  const handleOnSubmit = useCallback((event) => {
     event.preventDefault()
     fetchCards(keyword)
-  }
+  }, [keyword])
 
   return (
     <Container>
